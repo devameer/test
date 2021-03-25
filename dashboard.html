@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link rel="stylesheet" href="../css/datepicker.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style-rtl.css" />
+</head>
+
+<body>
+    <div class="dashboard-pages">
+        <!-- Start navBar section -->
+        <div class="nav-bar">
+            <div class="menu-open d-sm-none">
+                <button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+            </div>
+            <div class="logo">
+                <a href="#">
+                    <img src="../images/logo.png" alt="" />
+                </a>
+            </div> <!-- Navbar logo  -->
+            <div class="group">
+                <nav aria-label="breadcrumb" class="d-none d-sm-block">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item parent">
+                            <div class="icon">
+                                <i data-feather="life-buoy"></i>
+                            </div>
+                            <span>لوحة التحكم</span>
+                        </li>
+                        <li class="breadcrumb-item" aria-current="page">
+                            <span>عرض النتائج </span>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="user-datails">
+                    <div class="img">
+                        <img src="../images/25 Cute Hairstyles For Guys To Get in 2020.png" alt="" />
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <span>امير عبد الله</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">
+                                <div class="icon">
+                                    <i data-feather="file-text"></i>
+                                </div>
+                                <span></span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="icon">
+                                    <i data-feather="lock"></i>
+                                </div>
+                                <span>تغيير كلمة المرور</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="icon">
+                                    <i data-feather="power"></i>
+                                </div>
+                                <span>تسجيل الخروج</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div> <!--   user details   -->
+            </div>
+            <nav aria-label="breadcrumb" class="d-sm-none in-mobile">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item parent">
+                        <div class="icon">
+                            <i data-feather="life-buoy"></i>
+                        </div>
+                        <span>الرئيسية</span>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page">
+                        <span>عرض النتائج </span>
+                    </li>
+                    <li class="breadcrumb-item " aria-current="page">
+                        <span>البحث</span>
+                    </li>
+                </ol>
+            </nav> <!-- breadcrumb  -->
+        </div>
+        <!-- End navBar section -->
+        <!-- Start Main  section (contains content and sidbar) -->
+
+        <div id="main">
+            <!-- Start Sidebar section -->
+
+            <div class="sidebar"></div>
+            <!-- End sidebar section -->
+            <!-- Start content section -->
+
+            <div class="content">
+                <!--Dashboard head section start-->
+
+                <div class="dash-head">
+                    <h4>مرحباً بك في لوحة التحكم</h4>
+                    <div class="evaluate">
+                        <div class="text">
+                            تقييم الزبائن
+                        </div>
+                        <div class="rating">
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--Dashboard head section end-->
+
+                <div class="content-inner">
+                    <!--Dashboard section start-->
+                    <div class="dashboard-box-headlines">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <!--Boxes start-->
+
+                                <div class="public-box">
+
+
+                                    <div class="percent-img">
+                                        <div class="percent">
+                                            <p>25,00</p>
+                                        </div>
+                                        <div class="img">
+                                            <img src="images/WhatsApp Image 2020-07-29 at 7.03.48 PM.jpeg" alt="">
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="name">
+                                        <h3>عدد الموظفين</h3>
+                                    </div>
+
+
+                                </div>
+                                <div class="back-box"></div>
+                                <!--Boxes start-->
+                            </div>
+                            <div class="col-md-3">
+                                <!--Boxes start-->
+
+                                <div class="public-box">
+
+
+                                    <div class="percent-img">
+                                        <div class="percent">
+                                            <p>10</p>
+                                        </div>
+                                        <div class="img">
+                                            <img src="images/Screenshot_10@2x.png" alt="">
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="name">
+                                        <h3>أيام الاجازات</h3>
+                                    </div>
+
+
+                                </div>
+                                <div class="back-box"></div>
+                                <!--Boxes start-->
+                            </div>
+                            <div class="col-md-3">
+                                <!--Boxes start-->
+
+                                <div class="public-box">
+
+
+                                    <div class="percent-img">
+                                        <div class="percent">
+                                            <p>40 %</p>
+                                        </div>
+                                        <div class="img">
+                                            <img src="images/Screenshot_12.png" alt="">
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="name">
+                                        <h3>الرواتب المدفوعة</h3>
+                                    </div>
+
+
+                                </div>
+                                <div class="back-box"></div>
+                                <!--Boxes start-->
+                            </div>
+                            <div class="col-md-3">
+                                <!--Boxes start-->
+
+                                <div class="public-box">
+
+
+                                    <div class="percent-img">
+                                        <div class="percent">
+                                            <p>1234</p>
+                                        </div>
+                                        <div class="img">
+                                            <img src="images/WhatsApp Image 2020-07-29 at 7.03.48 PM (1).jpeg" alt="">
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="name">
+                                        <h3>الاستفسارات</h3>
+                                    </div>
+
+
+                                </div>
+                                <div class="back-box"></div>
+                                <!--Boxes start-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--Dashboard section end-->
+
+                    <!--Data Boxes section start-->
+                    <div class="data-boxes">
+                        <div class="row">
+                            <!--Box section start-->
+                            <div class="col-xs-12 col-md-3">
+
+
+                                <div class="box-title">
+                                    <div class="yellow-title">
+                                        أيام الدوام
+                                    </div>
+                                    <div class="box" style="display: flex; justify-content: center;align-items: center;">
+                                        <canvas id="PieChart" width="200" height="250"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Box section end-->
+                            <!--Box section start-->
+                            <div class="col-xs-12 col-md-4">
+                                <div class="box-title">
+                                    <div class="yellow-title">
+                                        أعمار الموظفين
+                                    </div>
+                                    <div class="box">
+                                        <canvas id="DoughnutChart" width="250" height="250"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Box section end-->
+                            <!--Box section start-->
+                            <div class="col-xs-12 col-md-5">
+                                <div class="box-title">
+                                    <div class="yellow-title">
+                                        نسب الرواتب
+                                    </div>
+                                    <div class="box">
+                                        <canvas id="lineChart" width="230" height="180"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Box section end-->
+                            <!--Box section start-->
+                            <div class="col-xs-12 col-md-7">
+
+                                <div class="box-title">
+                                    <div class="blue-title">
+                                        خدمات الموقع
+                                    </div>
+                                    <div class="box" style="height: 450px;">
+                                        <canvas id="barChart" width="400" height="250"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Box section end-->
+                            <!--Box section start-->
+                            <div class="col-xs-12 col-md-5">
+                                <div class="box-title">
+                                    <div class="blue-title">
+                                        إجمالي المستخدمين
+                                    </div>
+                                    <div class="box total-user-box" style="height: 125px;">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p> إجمالي المستخدمين</p>
+                                                <span class="total">7,560</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-info" role="progressbar"
+                                                        style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>المستخدمين المتاحين</p>
+                                                <span class="total">7,560</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-danger" role="progressbar"
+                                                        style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="box-title">
+
+                                    <div class="box">
+                                        <h4 class="title" style="margin: 0;">الخدمات الحالية</h4>
+                                       
+                                           
+                                            
+                                                <div class="chart">
+                                                    <canvas id="DoughnutChart2" width="400" height="250"></canvas>
+                                                </div>
+                                            
+                                      
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Box section end-->
+                            <!--Box section start-->
+                            <div class="col-xs-12 col-md-7">
+
+                                <div class="box-title">
+                                    <div class="purple-title">
+                                        نشاط الموقع
+                                    </div>
+                                    <div class="box" style="height: 310px;">
+                                        <div class="icon-data">
+                                            <div class="icon first-icon">
+                                                <i data-feather="life-buoy"></i>
+                                            </div>
+                                            <div class="info">
+                                                <p>جميع المدخلات</p>
+                                                <span>1350 خدمة شهرياَ</span>
+                                            </div>
+                                            <div class="time">
+                                                منذ 3 أيام
+                                            </div>
+                                        </div>
+                                        <div class="icon-data">
+                                            <div class="icon second-icon">
+                                                <i data-feather="shopping-cart"></i>
+                                            </div>
+                                            <div class="info">
+                                                <p>اجمالي الخدمات المقدمة</p>
+                                                <span>987 مبيعات جديدة</span>
+                                            </div>
+                                            <div class="time">
+                                                منذ 3 ساعات
+                                            </div>
+                                        </div>
+                                        <div class="icon-data">
+                                            <div class="icon third-icon">
+                                                <i data-feather="eye"></i>
+                                            </div>
+                                            <div class="info">
+                                                <p>زيارات المستخدمين</p>
+                                                <span>تزداد بنسبة 15 % شهرياً</span>
+                                            </div>
+                                            <div class="time">
+                                                منذ 3 5 دقيقة
+                                            </div>
+                                        </div>
+                                        <div class="icon-data">
+                                            <div class="icon fourth-icon">
+                                                <i data-feather="users"></i>
+                                            </div>
+                                            <div class="info">
+                                                <p>اراء المستخدمين</p>
+                                                <span>يضاف 1260 رسالة شهرياً</span>
+                                            </div>
+                                            <div class="time">
+                                                منذ 4 ساعات
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Box section end-->
+                            <!--Box section start-->
+                            <div class="col-xs-12 col-md-5">
+                                <div class="box-title">
+                                    <div class="purple-title">
+                                        الجنسيات
+                                    </div>
+                                    <div class="box" style="height: 310px;">
+                                        <div class="title-nationality">
+                                            <p>البلدان التي تتم المعاملة معهم</p>
+                                            <span>أداء الخدمات تعتمد على الدولة المتعاونة معها وسهولة التعاون</span>
+                                        </div>
+                                        <div class="icon-data">
+                                            <div class="icon">
+                                                <img src="images/Screenshot_18.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <h5>المملكة العربية السعودية</h5>
+                                            </div>
+                                            <div class="cost">
+                                                $1,345,67
+                                            </div>
+                                        </div>
+                                        <div class="icon-data">
+                                            <div class="icon">
+                                                <img src="images/Screenshot_19.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <h5>الاردن</h5>
+                                            </div>
+                                            <div class="cost">
+                                                $1,345,67
+                                            </div>
+                                        </div>
+                                        <div class="icon-data">
+                                            <div class="icon">
+                                                <img src="images/Screenshot_20.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <h5>مصر</h5>
+                                            </div>
+                                            <div class="cost">
+                                                $1,345,67
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Box section end-->
+                        </div>
+                        <!--Data Boxes section end-->
+                    </div>
+
+
+                </div>
+                <!-- Start content section -->
+
+            </div>
+            <!-- End Main  section (contains content and sidbar) -->
+
+
+        </div>
+        <!-- Start Footer section -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="inner">
+                    <h5>
+                        جميع الحقوق محفوظة لصالح الشركة@2020
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">اتصل بنا</a>
+                        </li>
+                        <li>
+                            <a href="#">تواصل معنا</a>
+                        </li>
+                        <li>
+                            <a href="#">المساعدة</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- End navBar section -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="../js/datepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="../modals/modal.js"></script>
+        <script src="../js/main.js"></script>
+
+</body>
+
+</html>

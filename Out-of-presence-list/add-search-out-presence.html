@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Out of Presence</title>
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link rel="stylesheet" href="../css/datepicker.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style-rtl.css" />
+</head>
+
+<body>
+  <div class="dashboard-pages">
+    <!-- Start navBar section -->
+    <div class="nav-bar">
+      <div class="menu-open d-sm-none">
+        <button>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="logo">
+        <a href="#">
+          <img src="../images/logo.png" alt="" />
+        </a>
+      </div>
+      <!-- Navbar logo  -->
+      <div class="group">
+        <nav aria-label="breadcrumb" class="d-none d-sm-block">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item parent">
+              <div class="icon">
+                <i data-feather="calendar"></i>
+              </div>
+              <span>إدارة خارج الدوام</span>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <span>بحث عن خارج الدوام</span>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <span>عرض الجداول</span>
+            </li>
+          </ol>
+        </nav>
+        <div class="user-datails">
+          <div class="img">
+            <img src="../images/25 Cute Hairstyles For Guys To Get in 2020.png" alt="" />
+          </div>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span>امير عبد الله</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">
+                <div class="icon">
+                  <i data-feather="file-text"></i>
+                </div>
+                <span>طلب إجازة</span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <div class="icon">
+                  <i data-feather="lock"></i>
+                </div>
+                <span>تغيير كلمة المرور</span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <div class="icon">
+                  <i data-feather="power"></i>
+                </div>
+                <span>تسجيل الخروج</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--   user details   -->
+      </div>
+      <nav aria-label="breadcrumb" class="d-sm-none in-mobile">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item parent">
+            <div class="icon">
+              <i data-feather="calendar"></i>
+            </div>
+            <span>إدارة خارج الدوام</span>
+          </li>
+          <li class="breadcrumb-item" aria-current="page">
+            <span>بحث عن خارج الدوام</span>
+          </li>
+          <li class="breadcrumb-item" aria-current="page">
+            <span>عرض الجداول</span>
+          </li>
+        </ol>
+      </nav>
+      <!-- breadcrumb  -->
+    </div>
+    <!-- End navBar section -->
+    <!-- Start Main  section (contains content and sidbar) -->
+
+    <div id="main">
+      <!-- Start Sidebar section -->
+
+      <div class="sidebar"></div>
+      <!-- End sidebar section -->
+      <!-- Start content section -->
+
+      <div class="content" style="margin-top: 25px;">
+
+        <div class="content-inner">
+          <!-- Start Addings pages section -->
+          <section class="addings-pages">
+            <!--HeadLine Start-->
+            <div class="head">
+              <div class="text">
+                تسجيل خارج وقت الدوام
+              </div>
+
+              <button id="save-success-btn" class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+            </div>
+            <!--HeadLine Start-->
+            <!--Inputs Group Start-->
+
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <div data-toggle="datepicker"></div>
+                      <input data-toggle="datepicker" type="text"/>
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">المدة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="watch"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-icon-label">
+                        <label for="">وقت الحضور</label>
+                        <div class="input-icon">
+                          <input class="timepicker" type="text" placeholder="-- : --" />
+                          <i data-feather="clock"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <div class="input-icon-label">
+                        <label for="">وقت الإنصراف</label>
+                        <div class="input-icon">
+                          <input class="timepicker" type="text" placeholder="-- : --" />
+                          <i data-feather="clock"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإنتهاء</label>
+                    <div class="input-icon">
+                      <div data-toggle="datepicker"></div>
+                      <input data-toggle="datepicker" type="text"/>
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Inputs Group End-->
+            <!--HeadLine Start-->
+            <div class="head">
+              <div class="text">
+                إضافة موظفين للتكليف
+              </div>
+              <button class="btn dark-blue-btn" type="button" id="modify-section" data-toggle="modal"
+                data-target="#exampleModal83">
+                <i data-feather="info"></i><span>إضافة موظف</span>
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal83" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        <i data-feather="plus-square"></i>
+                        <span>اضافة جديد</span>
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        style="margin: -25px -16px;">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="about-inputs">
+                        <div class="input-icon-label">
+                          <label for="">الموظف </label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>مدير</option>
+                              <option value="2">استاذ</option>
+                              <option value="3">مهندس</option>
+                            </select>
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                        <!--Buttons Group Start-->
+                        <div class="about-buttons">
+                          <button class="btn dark-blue-btn">
+                            <i data-feather="check"></i><span>حفظ</span>
+                          </button>
+                          <button class="btn cancel-red-btn" data-dismiss="modal">
+                            <i data-feather="x-circle"></i><span>الغاء</span>
+                          </button>
+                        </div>
+                        <!--Buttons Group End-->
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <div class="about-img">
+                        <img src="../images/search (2).png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--HeadLine Start-->
+            <!-- Start dashboard-table section -->
+            <div class="dashboard-table">
+              <table id="example-1" class="display" style="width: 100%;">
+                <thead>
+                  <tr>
+                    <th>الرقم</th>
+                    <th>خيارات</th>
+                    <th>أيام العمل</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+            <!-- End dashboard-table section -->
+          </section>
+          <!-- End Addings pages section -->
+        </div>
+      </div>
+      <!-- Start content section -->
+    </div>
+    <!-- End Main  section (contains content and sidbar) -->
+    <!-- Start Footer section -->
+    <div class="footer">
+      <div class="container-fluid">
+        <div class="inner">
+          <h5>
+            جميع الحقوق محفوظة لصالح الشركة@2020
+          </h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">اتصل بنا</a>
+            </li>
+            <li>
+              <a href="#">تواصل معنا</a>
+            </li>
+            <li>
+              <a href="#">المساعدة</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End navBar section -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="../js/datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="../modals/modal.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

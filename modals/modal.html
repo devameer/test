@@ -1,0 +1,4587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+  <link rel="stylesheet" href="../css/datepicker.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/style-rtl.css" />
+
+  <style></style>
+</head>
+
+<body>
+  <!--Success modification start-->
+
+  <div class="success">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="success" data-toggle="modal" data-target="#exampleModal121">
+      تم التعديل بنجاح
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal121" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-body text-canter">
+            <div class="about-img">
+              <img src="../images/check@2x.png" alt="">
+            </div>
+            <h3 id="modal-title">تم التعديل بنجاح</h3>
+          </div>
+          <div class="modal-footer">
+            <button class="btn cancel-red-btn" data-dismiss="modal">
+              <i data-feather="x-circle"></i><span>اغلاق</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Success modification end-->
+  <!--modify Success swal alert start-->
+
+  <div class="modify-success">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-success" data-toggle="modal" data-target="#exampleModal122">
+      تمت الاضافة بنجاح
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal122" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-body text-canter">
+            <div class="about-img">
+              <img src="../images/check@2x.png" alt="">
+            </div>
+            <h3 id="modal-title">تمت الاضافة بنجاح</h3>
+          </div>
+          <div class="modal-footer">
+            <button class="btn cancel-red-btn" data-dismiss="modal">
+              <i data-feather="x-circle"></i><span>اغلاق</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modify Success end-->
+  <!--save Success start-->
+  <div class="save-success">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="save-success" data-toggle="modal" data-target="#exampleModal123">
+      تم الحفظ بنجاح
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal123" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-body text-canter">
+            <div class="about-img">
+              <img src="../images/check@2x.png" alt="">
+            </div>
+            <h3 id="modal-title"> تم الحفظ بنجاح</h3>
+          </div>
+          <div class="modal-footer">
+            <button class="btn cancel-red-btn" data-dismiss="modal">
+              <i data-feather="x-circle"></i><span>اغلاق</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--save Success end-->
+
+  <!--delete confirm start-->
+  <div class="delete-confirm">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="delete-confirm" data-toggle="modal" data-target="#exampleModal124">
+      هل تريد تأكيد عملية الحذف ؟
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal124" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-body text-canter">
+            <div class="about-img">
+              <img src="../images/quit.png" alt="">
+            </div>
+            <h3 id="modal-title"> هل تريد تأكيد عملية الحذف ؟</h3>
+          </div>
+          <div class="modal-footer">
+            <button class="btn dark-blue-btn">
+              <i data-feather="check"></i><span>نعم</span>
+            </button>
+            <button class="btn cancel-red-btn" data-dismiss="modal">
+              <i data-feather="x-circle"></i><span>اغلاق</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--delete confirm end-->
+
+  <!--Modify section modal start-->
+  <div class="modify-section">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal">
+      تعديل قسم
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>تعديل قسم</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="
+                  right: auto;
+                  font-size: 2.3rem;
+                  font-weight: 600;
+                  opacity: 0.8;
+                ">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="input-icon-label">
+                <label for="">الاسم</label>
+                <div class="input-icon">
+                  <input type="text" placeholder="ادخل الاسم" />
+                  <i data-feather="layout"></i>
+                </div>
+              </div>
+              <!--Buttons Group Start-->
+              <div class="about-buttons">
+                <button class="btn dark-blue-btn">
+                  <i data-feather="check"></i><span>حفظ</span>
+                </button>
+                <button class="btn cancel-red-btn" data-dismiss="modal">
+                  <i data-feather="x-circle"></i><span>الغاء</span>
+                </button>
+              </div>
+              <!--Buttons Group End-->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="about-img">
+              <img src="../images/search (2).png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modify section modal end-->
+
+  <!--Add section modal start-->
+  <div class="add-section">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal2">
+      اضافة قسم
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>اضافة قسم</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="input-icon-label">
+                <label for="">اسم القسم</label>
+                <div class="input-icon">
+                  <input type="text" placeholder="ادخل اسم القسم" />
+                  <i data-feather="layout"></i>
+                </div>
+              </div>
+              <!--Buttons Group Start-->
+              <div class="about-buttons">
+                <button class="btn dark-blue-btn">
+                  <i data-feather="check"></i><span>حفظ</span>
+                </button>
+                <button class="btn cancel-red-btn" data-dismiss="modal">
+                  <i data-feather="x-circle"></i><span>الغاء</span>
+                </button>
+              </div>
+              <!--Buttons Group End-->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="about-img">
+              <img src="../images/search (2).png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add section modal end-->
+
+  <!--Add employee modal start-->
+  <div class="add-employee">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal3">
+      إضافة موظف
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header" style="padding: 7px 16px; align-items: center;">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة موظف</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Start dashboard tabs -->
+            <div class="dashboard-tabs">
+              <!-- Start dashboard tabs list -->
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="tab-one-tab" data-toggle="tab" href="#tab-one" role="tab"
+                    aria-controls="tab-one" aria-selected="true">
+                    <i data-feather="clipboard"></i>
+                    الرئيسية</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-two-tab" data-toggle="tab" href="#tab-two" role="tab"
+                    aria-controls="tab-two" aria-selected="false">
+                    <i data-feather="info"></i>
+                    بيانات الدوام والمسير</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-three-tab" data-toggle="tab" href="#tab-three" role="tab"
+                    aria-controls="tab-three" aria-selected="false">
+                    <i data-feather="trending-up"></i>
+                    بيانات الراتب</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-four-tab" data-toggle="tab" href="#tab-four" role="tab"
+                    aria-controls="tab-four" aria-selected="false">
+                    <i data-feather="database"></i>
+                    بيانات الاستقطاع</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-five-tab" data-toggle="tab" href="#tab-five" role="tab"
+                    aria-controls="tab-five" aria-selected="false">
+                    <i data-feather="user-minus"></i>
+                    بيانات حساب الاجازة</a>
+                </li>
+              </ul>
+              <!-- End dashboard tabs list -->
+              <!-- Start dashboard tabs content -->
+
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">رقم الموظف</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الاسم</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">رقم السجل</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">رقم الجوال</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="smartphone"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">القسم </label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>مدير</option>
+                              <option value="2">استاذ</option>
+                              <option value="3">مهندس</option>
+                            </select>
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الجنسية</label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>سعودي</option>
+                              <option value="2">اماراتي</option>
+                              <option value="3">بحريني</option>
+                            </select>
+                            <i data-feather="shield"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div class="tab-pane fade" id="tab-two" role="tabpanel" aria-labelledby="tab-two-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">نوع المسير </label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>مديرين النظام</option>
+                              <option value="2">مديرين النظام</option>
+                              <option value="3">مديرين النظام</option>
+                            </select>
+                            <i data-feather="target"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الدوام </label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>
+                                دوام فترة صباحية</option>
+                              <option value="2"> دوام فترة مسائية</option>
+                            </select>
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">البنك </label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected> بنك الراجحي</option>
+                              <option value="2"> بنك الراجحي</option>
+                            </select>
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">تاريخ المباشرة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="calendar"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">المسمى الوظيفي</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">المرتبة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">رقم الحساب البنكي</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div class="tab-pane fade" id="tab-three" role="tabpanel" aria-labelledby="tab-three-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">قيمة الراتب</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">بدل النقل</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">بدل معيشة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">بدلات اخرى</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">أخرى متنوعة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+
+                <div class="tab-pane fade" id="tab-four" role="tabpanel" aria-labelledby="tab-four-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">التأمنيات</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">قيمة قسط السلفة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="dollar-sign"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">تاريخ بداية السلفة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">تاريخ الانتهاء</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div class="tab-pane fade" id="tab-five" role="tabpanel" aria-labelledby="tab-five-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الرصيد الافتتاحي</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="dollar-sign"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">تاريخ الرصيد الافتتاحي</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">القيمة الشهرية للرصيدالاعتيادي</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="dollar-sign"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">القيمة السنوية للرصيدالاضطراري</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="dollar-sign"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="about-table-model">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>اجمالى المستحق من الاجازات الاعتيادية</th>
+                          <th>35</th>
+                          <th>اجمالى المستحق من الاجازات الاضطرارية</th>
+                          <th>5</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>الاجازات المتمتع بها</td>
+                          <td>0</td>
+                          <td>الاجازات المتمتع بها</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>الرصيد المتبقى</td>
+                          <td>30</td>
+                          <td>الرصيد المتبقى</td>
+                          <td>10</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+              </div>
+              <!-- End dashboard tabs content -->
+            </div>
+            <!-- End dashboard tabs -->
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add employee modal end-->
+
+  <!--Modify employee modal start-->
+  <div class="modify-employee">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal4">
+      تعديل موظف
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header" style="padding: 7px 16px; align-items: center;">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>تعديل موظف</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Start dashboard tabs -->
+            <div class="dashboard-tabs">
+              <!-- Start dashboard tabs list -->
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="tab-one-tab" data-toggle="tab" href="#add-tab-one" role="tab"
+                    aria-controls="tab-one" aria-selected="true">
+                    <i data-feather="clipboard"></i>
+                    الرئيسية</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-two-tab" data-toggle="tab" href="#add-tab-two" role="tab"
+                    aria-controls="tab-two" aria-selected="false">
+                    <i data-feather="info"></i>
+                    بيانات الدوام والمسير</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-three-tab" data-toggle="tab" href="#add-tab-three" role="tab"
+                    aria-controls="tab-three" aria-selected="false">
+                    <i data-feather="trending-up"></i>
+                    بيانات الراتب</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-four-tab" data-toggle="tab" href="#add-tab-four" role="tab"
+                    aria-controls="tab-four" aria-selected="false">
+                    <i data-feather="database"></i>
+                    بيانات الاستقطاع</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-five-tab" data-toggle="tab" href="#add-tab-five" role="tab"
+                    aria-controls="tab-five" aria-selected="false">
+                    <i data-feather="user-minus"></i>
+                    بيانات حساب الاجازة</a>
+                </li>
+              </ul>
+              <!-- End dashboard tabs list -->
+              <!-- Start dashboard tabs content -->
+
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="add-tab-one" role="tabpanel" aria-labelledby="tab-one-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">رقم الموظف</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الاسم</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">رقم السجل</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">رقم الجوال</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="smartphone"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">القسم </label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>مدير</option>
+                              <option value="2">استاذ</option>
+                              <option value="3">مهندس</option>
+                            </select>
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الجنسية</label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>سعودي</option>
+                              <option value="2">اماراتي</option>
+                              <option value="3">بحريني</option>
+                            </select>
+                            <i data-feather="shield"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div class="tab-pane fade" id="add-tab-two" role="tabpanel" aria-labelledby="tab-two-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">نوع المسير </label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>مديرين النظام</option>
+                              <option value="2">مديرين النظام</option>
+                              <option value="3">مديرين النظام</option>
+                            </select>
+                            <i data-feather="target"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الدوام </label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>
+                                دوام فترة صباحية</option>
+                              <option value="2"> دوام فترة مسائية</option>
+                            </select>
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">البنك </label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected> بنك الراجحي</option>
+                              <option value="2"> بنك الراجحي</option>
+                            </select>
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">تاريخ المباشرة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="calendar"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">المسمى الوظيفي</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">المرتبة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">رقم الحساب البنكي</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div class="tab-pane fade" id="add-tab-three" role="tabpanel" aria-labelledby="tab-three-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">قيمة الراتب</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">بدل النقل</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">بدل معيشة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">بدلات اخرى</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">أخرى متنوعة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+
+                <div class="tab-pane fade" id="add-tab-four" role="tabpanel" aria-labelledby="tab-four-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">التأمنيات</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">قيمة قسط السلفة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="dollar-sign"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">تاريخ بداية السلفة</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">تاريخ الانتهاء</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div class="tab-pane fade" id="add-tab-five" role="tabpanel" aria-labelledby="tab-five-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الرصيد الافتتاحي</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="dollar-sign"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">تاريخ الرصيد الافتتاحي</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">القيمة الشهرية للرصيدالاعتيادي</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="dollar-sign"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">القيمة السنوية للرصيدالاضطراري</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="dollar-sign"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="about-table-model">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>اجمالى المستحق من الاجازات الاعتيادية</th>
+                          <th>35</th>
+                          <th>اجمالى المستحق من الاجازات الاضطرارية</th>
+                          <th>5</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>الاجازات المتمتع بها</td>
+                          <td>0</td>
+                          <td>الاجازات المتمتع بها</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>الرصيد المتبقى</td>
+                          <td>30</td>
+                          <td>الرصيد المتبقى</td>
+                          <td>10</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+              </div>
+              <!-- End dashboard tabs content -->
+            </div>
+            <!-- End dashboard tabs -->
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modify employee modal end-->
+
+  <!--Modify nationality modal start-->
+  <div class="modify-nationality">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal5">
+      تعديل الجنسية
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>تعديل الجنسية</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="input-icon-label">
+                <label for="">الجنسية</label>
+                <div class="input-icon">
+                  <input type="text" placeholder="ادخل الجنسية" />
+                  <i data-feather="globe"></i>
+                </div>
+              </div>
+              <!--Buttons Group Start-->
+              <div class="about-buttons">
+                <button class="btn dark-blue-btn">
+                  <i data-feather="check"></i><span>حفظ</span>
+                </button>
+                <button class="btn cancel-red-btn" data-dismiss="modal">
+                  <i data-feather="x-circle"></i><span>الغاء</span>
+                </button>
+              </div>
+              <!--Buttons Group End-->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="about-img">
+              <img src="../images/43034.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modify nationality modal end-->
+
+  <!--Add nationality modal start-->
+  <div class="add-nationality">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal6">
+      اضافة الجنسية
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>اضافة الجنسية</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="input-icon-label">
+                <label for="">الجنسية</label>
+                <div class="input-icon">
+                  <input type="text" placeholder="ادخل الجنسية" />
+                  <i data-feather="globe"></i>
+                </div>
+              </div>
+              <!--Buttons Group Start-->
+              <div class="about-buttons">
+                <button class="btn dark-blue-btn">
+                  <i data-feather="check"></i><span>حفظ</span>
+                </button>
+                <button class="btn cancel-red-btn" data-dismiss="modal">
+                  <i data-feather="x-circle"></i><span>الغاء</span>
+                </button>
+              </div>
+              <!--Buttons Group End-->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="about-img">
+              <img src="../images/43034.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add nationality modal end-->
+
+  <!--Add presence modal start-->
+  <div class="add-presence">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal7">
+      إضافة دوام
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header" style="padding: 7px 16px; align-items: center;">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة دوام</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Start dashboard tabs -->
+            <div class="dashboard-tabs">
+              <!-- Start dashboard tabs list -->
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="tab-one-tab" data-toggle="tab" href="#dawam-tab-one" role="tab"
+                    aria-controls="tab-one" aria-selected="true">
+                    <i data-feather="clipboard"></i>
+                    البيانات الرئيسية</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-two-tab" data-toggle="tab" href="#dawam-tab-two" role="tab"
+                    aria-controls="tab-two" aria-selected="false">
+                    <i data-feather="clock"></i>
+                    أوقات الحضور</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-three-tab" data-toggle="tab" href="#dawam-tab-three" role="tab"
+                    aria-controls="tab-three" aria-selected="false">
+                    <i data-feather="clock"></i>
+                    أوقات الإنصراف</a>
+                </li>
+              </ul>
+              <!-- End dashboard tabs list -->
+              <!-- Start dashboard tabs content -->
+
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="dawam-tab-one" role="tabpanel" aria-labelledby="tab-one-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الاسم</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">أيام الدوام</label>
+                          <div id="about-table-model">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>السبت</th>
+                                  <th>الاحد</th>
+                                  <th>الاثنين</th>
+                                  <th>الثلاثاء</th>
+                                  <th>الاربعاء</th>
+                                  <th>الخميس</th>
+                                  <th>الجمعة</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch10" checked />
+                                      <label class="custom-control-label" for="customSwitch10"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch2" checked />
+                                      <label class="custom-control-label" for="customSwitch2"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch3" checked />
+                                      <label class="custom-control-label" for="customSwitch3"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch4" checked />
+                                      <label class="custom-control-label" for="customSwitch4"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch5" checked />
+                                      <label class="custom-control-label" for="customSwitch5"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch6" checked />
+                                      <label class="custom-control-label" for="customSwitch6"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch7" checked />
+                                      <label class="custom-control-label" for="customSwitch7"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div class="tab-pane fade" id="dawam-tab-two" role="tabpanel" aria-labelledby="tab-two-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت الحضور</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية حسم الحضور</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية الحضور</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                          <span style="color: #44943e; font-size: 12px ;">أي توقيع قبل هذا الوقت لا ينظر به</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">نهاية وقت الحضور</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                          <span style="color: #44943e; font-size: 12px ;">أي توقيع قبل هذا الوقت لا ينظر به</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت الحضور</label>
+                          <span>( دوام رمضان )</span>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية حسم الحضور</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div class="tab-pane fade" id="dawam-tab-three" role="tabpanel" aria-labelledby="tab-three-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت الانصراف</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية حسم الانصراف</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية الانصراف</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                          <span style="color: #44943e; font-size: 12px ;">أي توقيع قبل هذا الوقت لا ينظر به</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">نهاية وقت الانصراف</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                          <span style="color: #44943e; font-size: 12px ;">أي توقيع قبل هذا الوقت لا ينظر به</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت الانصراف</label>
+                          <span>( دوام رمضان )</span>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية حسم الانصراف</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت الانصراف في اليوم التالي</label>
+                          <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1" checked />
+                            <label class="custom-control-label" for="customSwitch1" id="green-red-switch"></label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="input-icon-label">
+                              <label for="">حسم عدم الحضور</label>
+                              <div class="input-icon">
+                                <input type="text" />
+                                <i data-feather="user-minus"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="input-icon-label">
+                              <label for="">حسم عدم الانصراف</label>
+                              <div class="input-icon">
+                                <input type="text" />
+                                <i data-feather="user-minus"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+              </div>
+              <!-- End dashboard tabs content -->
+            </div>
+            <!-- End dashboard tabs -->
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Add presence modal end-->
+  <!--Modify presence modal start-->
+  <div class="Modify-presence">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal111">
+      تعديل دوام
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal111" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header" style="padding: 7px 16px; align-items: center;">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>تعديل دوام</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Start dashboard tabs -->
+            <div class="dashboard-tabs">
+              <!-- Start dashboard tabs list -->
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="tab-one-tab" data-toggle="tab" href="#dawam-tab-one" role="tab"
+                    aria-controls="tab-one" aria-selected="true">
+                    <i data-feather="clipboard"></i>
+                    البيانات الرئيسية</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-two-tab" data-toggle="tab" href="#dawam-tab-two" role="tab"
+                    aria-controls="tab-two" aria-selected="false">
+                    <i data-feather="clock"></i>
+                    أوقات الحضور</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-three-tab" data-toggle="tab" href="#dawam-tab-three" role="tab"
+                    aria-controls="tab-three" aria-selected="false">
+                    <i data-feather="clock"></i>
+                    أوقات الإنصراف</a>
+                </li>
+              </ul>
+              <!-- End dashboard tabs list -->
+              <!-- Start dashboard tabs content -->
+
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="dawam-tab-one" role="tabpanel" aria-labelledby="tab-one-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الاسم</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">أيام الدوام</label>
+                          <div id="about-table-model">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>السبت</th>
+                                  <th>الاحد</th>
+                                  <th>الاثنين</th>
+                                  <th>الثلاثاء</th>
+                                  <th>الاربعاء</th>
+                                  <th>الخميس</th>
+                                  <th>الجمعة</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch10" checked />
+                                      <label class="custom-control-label" for="customSwitch10"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch2" checked />
+                                      <label class="custom-control-label" for="customSwitch2"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch3" checked />
+                                      <label class="custom-control-label" for="customSwitch3"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch4" checked />
+                                      <label class="custom-control-label" for="customSwitch4"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch5" checked />
+                                      <label class="custom-control-label" for="customSwitch5"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch6" checked />
+                                      <label class="custom-control-label" for="customSwitch6"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="custom-control custom-switch">
+                                      <input type="checkbox" class="custom-control-input" id="customSwitch7" checked />
+                                      <label class="custom-control-label" for="customSwitch7"
+                                        id="green-red-switch"></label>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div class="tab-pane fade" id="dawam-tab-two" role="tabpanel" aria-labelledby="tab-two-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت الحضور</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية حسم الحضور</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية الحضور</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                          <span style="color: #44943e; font-size: 12px ;">أي توقيع قبل هذا الوقت لا ينظر به</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">نهاية وقت الحضور</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                          <span style="color: #44943e; font-size: 12px ;">أي توقيع قبل هذا الوقت لا ينظر به</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت الحضور</label>
+                          <span>( دوام رمضان )</span>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية حسم الحضور</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div class="tab-pane fade" id="dawam-tab-three" role="tabpanel" aria-labelledby="tab-three-tab">
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت الانصراف</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية حسم الانصراف</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية الانصراف</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                          <span style="color: #44943e; font-size: 12px ;">أي توقيع قبل هذا الوقت لا ينظر به</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">نهاية وقت الانصراف</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                          <span style="color: #44943e; font-size: 12px ;">أي توقيع قبل هذا الوقت لا ينظر به</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت الانصراف</label>
+                          <span>( دوام رمضان )</span>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت بداية حسم الانصراف</label>
+                          <div class="input-icon">
+                            <input type="text" placeholder="-- : --" />
+                            <i data-feather="clock"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">وقت الانصراف في اليوم التالي</label>
+                          <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1" checked />
+                            <label class="custom-control-label" for="customSwitch1" id="green-red-switch"></label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="input-icon-label">
+                              <label for="">حسم عدم الحضور</label>
+                              <div class="input-icon">
+                                <input type="text" />
+                                <i data-feather="user-minus"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="input-icon-label">
+                              <label for="">حسم عدم الانصراف</label>
+                              <div class="input-icon">
+                                <input type="text" />
+                                <i data-feather="user-minus"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+              </div>
+              <!-- End dashboard tabs content -->
+            </div>
+            <!-- End dashboard tabs -->
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Modify presence modal end-->
+  <!--Add Period modal start-->
+  <div class="add-period">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal8">
+      اضافة دورة
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 630px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>اضافة دورة</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الموظف</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="ادخل اسم الموظف" />
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">المدة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="clock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">نوع الدورة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="clipboard"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإنتهاء</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add section modal end-->
+
+  <!--Modify Period modal start-->
+  <div class="modify-period">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal9">
+      تعديل دورة
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 630px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>تعديل دورة</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الموظف</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="فرج محمد" />
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">المدة</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="200" />
+                      <i data-feather="clock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">نوع الدورة</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="برمجة" />
+                      <i data-feather="clipboard"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="20-10-2020" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإنتهاء</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="20-10-2021" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add section modal end-->
+
+  <!--Add permission request modal start-->
+  <div class="add-permission-request">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal10">
+      إضافة طلب إستئذان
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 630px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة طلب إستئذان</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">نوع الإستئذان</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بالاختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user-minus"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإستئذان</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">سبب الاستئذان</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="file"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">رئيس القسم</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بالاختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">المدير</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>مدير</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الدوام</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بالاختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="clipboard"></i>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add permission request modal end-->
+
+  <!--Add vacation modal start-->
+  <div class="add-vacation">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal11">
+      إضافة إجازة
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة إجازة</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الموظف</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>مدير</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">المدة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="clock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">نوع الاجازة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="clipboard"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإنتهاء</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="about-table-model">
+              <table>
+                <thead>
+                  <tr>
+                    <th>اجمالى المستحق من الاجازات الاعتيادية</th>
+                    <th>35</th>
+                    <th>اجمالى المستحق من الاجازات الاضطرارية</th>
+                    <th>5</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>الاجازات المتمتع بها</td>
+                    <td>0</td>
+                    <td>الاجازات المتمتع بها</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>الرصيد المتبقى</td>
+                    <td>30</td>
+                    <td>الرصيد المتبقى</td>
+                    <td>10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add vacation modal end-->
+
+  <!--Modify vacation modal start-->
+  <div class="modify-vacation">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal12">
+      تعديل إجازة
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>تعديل إجازة</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الموظف</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>مدير</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">المدة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="clock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">نوع الاجازة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="clipboard"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإنتهاء</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="about-table-model">
+              <table>
+                <thead>
+                  <tr>
+                    <th>اجمالى المستحق من الاجازات الاعتيادية</th>
+                    <th>35</th>
+                    <th>اجمالى المستحق من الاجازات الاضطرارية</th>
+                    <th>5</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>الاجازات المتمتع بها</td>
+                    <td>0</td>
+                    <td>الاجازات المتمتع بها</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>الرصيد المتبقى</td>
+                    <td>30</td>
+                    <td>الرصيد المتبقى</td>
+                    <td>10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add permission request modal end-->
+
+  <!--Add dawam period modal start-->
+  <div class="add-dawam-period">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal13">
+      اضافة فترات الدوام
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>اضافة </span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الفترات </label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بالاختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="clock"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الانتهاء</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>حذف</span>
+              </button>
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add section modal end-->
+
+  <!--Add user modal start-->
+  <div class="add-user">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal14">
+      إضافة مستخدم
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal14" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة مستخدم</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الموظف </label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>مدير</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="users"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">إسم المستخدم</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">كلمة المرور</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="lock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">نوع الصلاحية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="link-2"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">نوع التاريخ</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label" style="
+                        display: flex;
+                        align-items: center;
+                        margin-top: 10px;
+                      ">
+                    <label for="" style="margin-left: 10px;">صلاحية مدير القسم
+                    </label>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch20" checked />
+                      <label class="custom-control-label green-switch" for="customSwitch20"></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label" style="
+                        display: flex;
+                        align-items: center;
+                        margin-top: 10px;
+                      ">
+                    <label for="" style="margin-left: 10px;">صلاحية مدير القسم
+                    </label>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch21" checked />
+                      <label class="custom-control-label green-switch" for="customSwitch21"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add user modal end-->
+
+  <!--Modify user modal start-->
+  <div class="modify-user">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal15">
+      تعديل مستخدم
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal15" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>تعديل مستخدم</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الموظف </label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>مدير</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="users"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">إسم المستخدم</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">كلمة المرور</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="lock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">نوع الصلاحية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="link-2"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">نوع التاريخ</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label" style="
+                        display: flex;
+                        align-items: center;
+                        margin-top: 10px;
+                      ">
+                    <label for="" style="margin-left: 10px;">صلاحية مدير القسم
+                    </label>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch22" checked />
+                      <label class="custom-control-label green-switch" for="customSwitch22"></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label" style="
+                        display: flex;
+                        align-items: center;
+                        margin-top: 10px;
+                      ">
+                    <label for="" style="margin-left: 10px;">صلاحية مدير القسم
+                    </label>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch23" checked />
+                      <label class="custom-control-label green-switch" for="customSwitch23"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modify user modal end-->
+
+  <!--Modify basic info modal start-->
+  <div class="modify-basic-info">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal16">
+      تعديل المعلومات الاساسية
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal16" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>تعديل المعلومات الاساسية</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">السطر الأول في التقرير</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="file-text"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">السطر الثاني في التقرير</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="file-text"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">السطر الثالث في التقرير</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="file-text"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">مدير الشئون المالية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">مدير الشئون الإدارية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">المشرف المالي</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">نائب رئيس اللجنة التنفيذية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">رئيس اللجنة التنفيذية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">البنك</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="briefcase"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">رقم الحساب البنكي</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="briefcase"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modify basic info modal end-->
+
+  <!-- Add mandate modal start-->
+  <div class="add-mandate">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal21">
+      اضافة إنتداب
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal21" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>اضافة إنتداب</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الموظف</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>مدير</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">المدة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="clock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">الجهة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="clipboard"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإنتهاء</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add mandate modal end-->
+
+  <!-- Modify mandate modal start-->
+  <div class="modify-mandate">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal17">
+      تعديل إنتداب
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal17" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>تعديل إنتداب</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الموظف</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>مدير</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">المدة</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="6" />
+                      <i data-feather="clock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">الجهة</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="الادارة العامة" />
+                      <i data-feather="clipboard"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="6-2-1997" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإنتهاء</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="6-2-1997" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modify mandate modal end-->
+
+  <!--Add Evaluation modal start-->
+  <div class="add-evaluation">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal18">
+      إضافة تقييم
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal18" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة تقييم </span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الاسم</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بالاختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">العام</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بالاختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="calendar"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">نسبة التقييم </label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="percent"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add Evaluation modal end-->
+
+  <!--modify Evaluation modal start-->
+  <div class="modify-evaluation">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal2020">
+      تعديل تقييم
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2020" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>تعديل تقييم </span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الاسم</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بالاختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">العام</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بالاختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="calendar"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">نسبة التقييم </label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="percent"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--modify Evaluation modal end-->
+
+
+  <!--Add training modal start-->
+  <div class="add-training">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal19">
+      إضافة تدريب
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal19" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة تدريب </span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">العنوان </label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="globe"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">التاريخ </label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">ساعات التدريب</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="watch"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add training modal end-->
+
+  <!--Add employee to training modal start-->
+  <div class="add-employee-to-training">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal20">
+      إضافة موظف الى التدريب
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal20" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة موظف الى التدريب</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-icon-label">
+              <label for="">التدريب</label>
+              <div class="input-icon">
+                <select class="custom-select">
+                  <option value="1" selected>قم بأختيار التدريب</option>
+                  <option value="2">استاذ</option>
+                  <option value="3">مهندس</option>
+                </select>
+                <i data-feather="globe"></i>
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="about-img">
+              <img src="../images/work.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add employee to training modal end-->
+
+  <!-- Add mission modal start-->
+  <div class="add-mission">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal23">
+      اضافة مهمة
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal23" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>اضافة مهمة</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الموظف</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بأختيار الموظف</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">المدة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="clock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">الجهة\ النوع</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="clipboard"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإنتهاء</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add mandate modal end-->
+
+  <!-- Add official vacation modal start-->
+  <div class="add-official-vacation">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal24">
+      إضافة إجازة رسمية
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal24" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة إجازة رسمية</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">إسم الاجازة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإنتهاء</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add official vacation modal end-->
+
+  <!-- Modify official vacation modal start-->
+  <div class="modify-official-vacation">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal28">
+      تعديل إجازة رسمية
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal28" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>تعديل إجازة رسمية</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">إسم الاجازة</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="عيد الفطر" />
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="1-1-2019" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإنتهاء</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="1-1-2019" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modify official vacation modal end-->
+
+  <!--Add types of marches modal start-->
+  <div class="add-types-of-marches">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal29">
+      اضافة أنواع المسيرات
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal29" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>اضافة أنواع المسيرات</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="input-icon-label">
+                <label for="">الإسم </label>
+                <div class="input-icon">
+                  <input type="text" />
+                  <i data-feather="layout"></i>
+                </div>
+              </div>
+              <!--Buttons Group Start-->
+              <div class="about-buttons">
+                <button class="btn dark-blue-btn">
+                  <i data-feather="check"></i><span>حفظ</span>
+                </button>
+                <button class="btn cancel-red-btn" data-dismiss="modal">
+                  <i data-feather="x-circle"></i><span>الغاء</span>
+                </button>
+              </div>
+              <!--Buttons Group End-->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="about-img">
+              <img src="../images/computer.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add types of marches modal end-->
+
+  <!--Modify types of marches modal start-->
+  <div class="Modify-types-of-marches">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal25">
+      تعديل أنواع المسيرات
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal25" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>تعديل أنواع المسيرات</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="input-icon-label">
+                <label for="">الإسم </label>
+                <div class="input-icon">
+                  <input type="text" placeholder="ريهام حجازي" />
+                  <i data-feather="layout"></i>
+                </div>
+              </div>
+              <!--Buttons Group Start-->
+              <div class="about-buttons">
+                <button class="btn dark-blue-btn">
+                  <i data-feather="check"></i><span>حفظ</span>
+                </button>
+                <button class="btn cancel-red-btn" data-dismiss="modal">
+                  <i data-feather="x-circle"></i><span>الغاء</span>
+                </button>
+              </div>
+              <!--Buttons Group End-->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="about-img">
+              <img src="../images/computer.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modify types of marches modal end-->
+
+  <!-- Add a manual preparation modal start-->
+  <div class="Add-manual-preparation">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal26">
+      إضافة تحضير يدوي
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal26" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة تحضير يدوي</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الموظف</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بأختيار الموظف</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">وقت التوقيع</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="-- : --" />
+                      <i data-feather="clock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">اليوم</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">حالة التوقيع</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بالأختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="clipboard"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الدوام</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بالأختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="file"></i>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add a manual preparation modal end-->
+
+  <!-- Modify a manual preparation modal start-->
+  <div class="modify-manual-preparation">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal30">
+      تعديل تحضير يدوي
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal30" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="edit"></i>
+              <span>تعديل تحضير يدوي</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الموظف</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected> قم بأختيار الموظف</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">وقت التوقيع</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="02:00" />
+                      <i data-feather="clock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">اليوم</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="الاحد" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">حالة التوقيع</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected> قم بالأختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="clipboard"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                  <div class="input-icon-label">
+                    <label for="">الدوام</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected> قم بالأختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="file"></i>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modify a manual preparation modal end-->
+
+  <!--Add vacation request modal start-->
+  <div class="add-vacation-request">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal32">
+      إضافة طلب إجازة
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal32" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة طلب إجازة</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">المدة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="clock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">نوع الاجازة</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected> قم بالأختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="clipboard"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ البداية</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">تاريخ الإنتهاء</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">رئيس القسم</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected> قم بالأختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label">
+                    <label for="">المدير</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected> قم بالأختيار</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="user"></i>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                  <div class="input-icon-label" style="display: flex;">
+                    <label for="" style="margin-left: 20px;">المرفقات</label>
+                    <div class="input-icon" style="display: flex; width: 100%;">
+
+                      <div class="input-file">
+                        <i data-feather="arrow-up"></i>
+                        <label for="fileInput">اختر ملف</label>
+                        <input type="file" id="fileInput" multiple />
+                        <button class="btn d-none" id="cancel">
+                          <i data-feather="x"></i>
+                        </button>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="about-table-model">
+              <table>
+                <thead>
+                  <tr>
+                    <th>اجمالى المستحق من الاجازات الاعتيادية</th>
+                    <th>35</th>
+                    <th>اجمالى المستحق من الاجازات الاضطرارية</th>
+                    <th>5</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>الاجازات المتمتع بها</td>
+                    <td>0</td>
+                    <td>الاجازات المتمتع بها</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>الرصيد المتبقى</td>
+                    <td>30</td>
+                    <td>الرصيد المتبقى</td>
+                    <td>10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add vacation request modal end-->
+
+
+
+
+  <!--Add new modal start-->
+  <div class="add-new-modal">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal83">
+      اضافة جديد
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal83" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>اضافة جديد</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="input-icon-label">
+                <label for="">الموظف </label>
+                <div class="input-icon">
+                  <select class="custom-select">
+                    <option value="1" selected>مدير</option>
+                    <option value="2">استاذ</option>
+                    <option value="3">مهندس</option>
+                  </select>
+                  <i data-feather="user"></i>
+                </div>
+              </div>
+              <!--Buttons Group Start-->
+              <div class="about-buttons">
+                <button class="btn dark-blue-btn">
+                  <i data-feather="check"></i><span>حفظ</span>
+                </button>
+                <button class="btn cancel-red-btn" data-dismiss="modal">
+                  <i data-feather="x-circle"></i><span>الغاء</span>
+                </button>
+              </div>
+              <!--Buttons Group End-->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="about-img">
+              <img src="../images/search (2).png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add new modal end-->
+  <!--Add Screen model start-->
+  <div class="add-screen">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal1010">
+      اضافة شاشة
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1010" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 630px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>اضافة شاشة</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+
+                <div class="col-sm-12">
+                  <div class="input-icon-label">
+                    <label for="">الاسم</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="monitor"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="input-icon-label">
+                    <label for="">رابط الشاشة</label>
+                    <div class="input-icon">
+                      <input type="text" />
+                      <i data-feather="monitor"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="input-icon-label">
+                    <label for="">نوع الشاشة</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>فرعية</option>
+                        <option value="2">رئيسية</option>
+
+                      </select>
+                      <i data-feather="monitor"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="input-icon-label">
+                    <label for="">الشاشة الرئيسية</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>ادارة خارج الدوام</option>
+                        <option value="2">التقارير و المسيرات</option>
+                        <option value="3">ادارة الاجازات</option>
+                        <option value="4" selected>ادارة الدوام</option>
+                        <option value="5">الاستئذان</option>
+                        <option value="6">ادارة النظام</option>
+                      </select>
+                      <i data-feather="monitor"></i>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Add Screen model end-->
+  <!--Modify Screen model start-->
+  <div class="modify-screen">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal0101">
+      اضافة شاشة
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal0101" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 630px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>اضافة شاشة</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="row">
+
+                <div class="col-sm-12">
+                  <div class="input-icon-label">
+                    <label for="">الاسم</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="ادارة الدوام" />
+                      <i data-feather="monitor"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="input-icon-label">
+                    <label for="">رابط الشاشة</label>
+                    <div class="input-icon">
+                      <input type="text" placeholder="#" />
+                      <i data-feather="monitor"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="input-icon-label">
+                    <label for="">نوع الشاشة</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>فرعية</option>
+                        <option value="2">رئيسية</option>
+
+                      </select>
+                      <i data-feather="monitor"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="input-icon-label">
+                    <label for="">الشاشة الرئيسية</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>ادارة خارج الدوام</option>
+                        <option value="2">التقارير و المسيرات</option>
+                        <option value="3">ادارة الاجازات</option>
+                        <option value="4" selected>ادارة الدوام</option>
+                        <option value="5">الاستئذان</option>
+                        <option value="6">ادارة النظام</option>
+                      </select>
+                      <i data-feather="monitor"></i>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Modify Screen model end-->
+
+  <!--Search first modal start-->
+  <div class="search-first">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="delete-confirm" data-toggle="modal" data-target="#exampleModal002">
+      ابحث اولا !
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal002" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-body text-canter">
+            <div class="about-img">
+              <img src="../images/quit.png" alt="">
+            </div>
+            <h3 id="modal-title"> ابحث اولا !</h3>
+          </div>
+          <div class="modal-footer">
+            <button class="btn cancel-red-btn" data-dismiss="modal">
+              <i data-feather="x-circle"></i><span>اغلاق</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Search first modal end-->
+  <!--Resolve absence modal start-->
+  <div class="absence">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal1122">
+      حسم غياب
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1122" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style=" max-width: 630px !important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>الغياب</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Start management And sections section -->
+            <div class="management-sections">
+              <!-- Start dashboard-table section -->
+              <div class="dashboard-table">
+                <table id="example-1" class="display" style="width: 100%;">
+                  <thead>
+                    <tr>
+                      <th>الرقم</th>
+                      <th>الاسم</th>
+                      <th>رقم الجوال</th>
+                      <th>رقم السجل</th>
+                      <th>وقت الحضور</th>
+                      <th>نوع الفترة</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>فرج موسى</td>
+                      <td>0598627543</td>
+                      <td>123</td>
+                      <td>20:03 20/8/2018</td>
+                      <td>صباحي</td>
+
+
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>فرج موسى</td>
+                      <td>0598627543</td>
+                      <td>123</td>
+                      <td>20:03 20/8/2018</td>
+                      <td>صباحي</td>
+
+
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>فرج موسى</td>
+                      <td>0598627543</td>
+                      <td>123</td>
+                      <td>20:03 20/8/2018</td>
+                      <td>صباحي</td>
+
+
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>فرج موسى</td>
+                      <td>0598627543</td>
+                      <td>123</td>
+                      <td>20:03 20/8/2018</td>
+                      <td>صباحي</td>
+
+
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>فرج موسى</td>
+                      <td>0598627543</td>
+                      <td>123</td>
+                      <td>20:03 20/8/2018</td>
+                      <td>صباحي</td>
+
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End dashboard-table section -->
+            </div>
+            <!-- End management And sections section -->
+          </div>
+          <div class="modal-footer">
+            <button class="btn cancel-red-btn" data-dismiss="modal">
+              <i data-feather="x-circle"></i><span>الغاء</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Resolve absence modal end-->
+
+  <!--Add rule modal start-->
+  <div class="add-rule">
+    <!-- Button trigger modal -->
+
+    <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal696">
+      اضافة قانون
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal696" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>اضافة قانون</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-inputs">
+              <div class="input-icon-label">
+                <label for="">الاسم</label>
+                <div class="input-icon">
+                  <input type="text" placeholder="ادخل اسم القانون " />
+                  <i data-feather="file-text"></i>
+                </div>
+              </div>
+              <div class="attach-file">
+                <label for="rule-file" class="rule-file" id="rule-file2">
+                  <div class="icon">
+                    <i data-feather="arrow-up"></i>
+                  </div>
+                  <div class="text">
+                    <h4>نص القانون الخاص بك بصيغة pdf</h4>
+                    <span>اسحب الملف الى هما او انقر للاختيار يدويا</span>
+                  </div>
+                </label>
+                <input type="file" name="rule-file" id="rule-file" class="d-none">
+              </div>
+              <!--Buttons Group Start-->
+              <div class="about-buttons">
+                <button class="btn dark-blue-btn">
+                  <i data-feather="check"></i><span>حفظ</span>
+                </button>
+                <button class="btn cancel-red-btn" data-dismiss="modal">
+                  <i data-feather="x-circle"></i><span>الغاء</span>
+                </button>
+              </div>
+              <!--Buttons Group End-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Add rule modal end-->
+
+ <!--Modify rule modal start-->
+ <div class="add-rule">
+  <!-- Button trigger modal -->
+
+  <button type="button" id="modify-section" data-toggle="modal" data-target="#exampleModal969">
+    تعديل قانون
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal969" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <i data-feather="edit"></i>
+            <span>تعديل قانون</span>
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: -25px -16px;">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="about-inputs">
+            <div class="input-icon-label">
+              <label for="">الاسم</label>
+              <div class="input-icon">
+                <select class="custom-select">
+                  <option value="1" selected>قانون الدوامات</option>
+                  <option value="2">قانون الموظفين</option>
+                </select>
+                <i data-feather="file-text"></i>
+              </div>
+            </div>
+            <div class="attach-file">
+              <label for="rule-file" class="rule-file" id="rule-file2">
+                <div class="icon">
+                  <i data-feather="arrow-up"></i>
+                </div>
+                <div class="text">
+                  <h4>نص القانون الخاص بك بصيغة pdf</h4>
+                  <span>اسحب الملف الى هما او انقر للاختيار يدويا</span>
+                </div>
+              </label>
+              <input type="file" name="rule-file" id="rule-file" class="d-none">
+            </div>
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modify rule modal end-->
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="../js/datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="../modals/modal.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

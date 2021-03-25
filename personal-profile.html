@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link rel="stylesheet" href="../css/datepicker.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style-rtl.css" />
+</head>
+
+<body>
+    <div class="dashboard-pages">
+        <!-- Start navBar section -->
+        <div class="nav-bar">
+            <div class="menu-open d-sm-none">
+                <button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+            </div>
+            <div class="logo">
+                <a href="#">
+                    <img src="../images/logo.png" alt="" />
+                </a>
+            </div> <!-- Navbar logo  -->
+            <div class="group">
+                <nav aria-label="breadcrumb" class="d-none d-sm-block">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item parent">
+                            <div class="icon">
+                                <i data-feather="user"></i>
+                            </div>
+                            <span>الملف الشخصي</span></a>
+                        </li>
+                        <li class="breadcrumb-item" aria-current="page">
+                            <span>عرض البيانات </span>
+                        </li>
+
+                    </ol>
+                </nav>
+                <div class="user-datails">
+                    <div class="img">
+                        <img src="../images/25 Cute Hairstyles For Guys To Get in 2020.png" alt="" />
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <span>امير عبد الله</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">
+                                <div class="icon">
+                                    <i data-feather="file-text"></i>
+                                </div>
+                                <span>طلب إجازة</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="icon">
+                                    <i data-feather="lock"></i>
+                                </div>
+                                <span>تغيير كلمة المرور</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="icon">
+                                    <i data-feather="power"></i>
+                                </div>
+                                <span>تسجيل الخروج</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div> <!--   user details   -->
+            </div>
+            <nav aria-label="breadcrumb" class="d-sm-none in-mobile">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item parent">
+                        <div class="icon">
+                            <img src="../images/home.svg" alt="" />
+                        </div>
+                        <span>الرئيسية</span></a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page">
+                        <span>عرض النتائج </span>
+                    </li>
+                    <li class="breadcrumb-item " aria-current="page">
+                        <span>البحث</span>
+                    </li>
+                </ol>
+            </nav> <!-- breadcrumb  -->
+        </div>
+        <!-- End navBar section -->
+        <!-- Start Main  section (contains content and sidbar) -->
+
+        <div id="main">
+            <!-- Start Sidebar section -->
+
+            <div class="sidebar"></div>
+            <!-- End sidebar section -->
+            <!-- Start content section -->
+
+            <div class="content profile">
+                <div class="content-inner">
+                    <div class="row">
+
+                        <div class="col-sm-12 col-md-3 pl-0">
+                      <div class="right-personal-info">
+                        <div class="about-img">
+                            <img src="images/profile.png" alt="">
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="title">
+                                    <svg class="fill-svg">
+                                        <use xlink:href="images/icons.svg#graduate"></use>
+                                    </svg>
+                                    <h3>التعليم</h3>
+                                </div>
+                                <span>بكالوريوس إدارة أعمال</span>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <svg class="fill-svg">
+                                        <use xlink:href="images/icons.svg#master-card"></use>
+                                        
+
+                                        
+                                    </svg>
+                                    <h3>رقم الهوية</h3>
+                                </div>
+                                <span>042096222</span>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <i data-feather="map-pin"></i>
+                                    <h3>العنوان</h3>
+                                </div>
+                                <span>شارع النصر , دوار حميد</span>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <i data-feather="smartphone"></i>
+                                    <h3>رقم الجوال</h3>
+                                </div>
+                                <span>0598763556</span>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <svg class="fill-svg"> 
+                                        <use xlink:href="images/icons.svg#skills"></use>
+                                    </svg>
+                                    <h3>المهارات</h3>
+                                </div>
+                                <span>ادراة المهام ومراقبة النظام</span>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <i data-feather="at-sign"></i>
+                                    <h3>الايميل</h3>
+                                </div>
+                                <span>moh-faraj86@gmail.com</span>
+                            </li>
+                        </ul>
+                      </div>
+                        </div>
+                        <div class="col-sm-12 col-md-9 pr-0">
+                            <div class="left-personal-info">
+                                <div class="headline">
+                                    <div class="icon">
+                                        <img src="images/carnet.png" alt="">
+                                    </div>
+                                    <div class="info-text">
+                                        <div class="name">
+                                            <i data-feather="user"></i>
+                                            <h3>محمد أحمد محمود فرج</h3>
+                                        </div>
+                                        <div class="job">
+                                            <i data-feather="globe"></i>
+                                            <p>مدير قسم التسويق</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-list">
+                                    <ul>
+                                        <li>
+                                            <div class="title">
+                                                <i data-feather="columns"></i>
+                                                <h3>رقم السجل</h3>
+                                            </div>
+                                            <div class="text">
+                                                <span>2384526</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="title">
+                                                <i data-feather="flag"></i>
+                                                <h3>الجنسية</h3>
+                                            </div>
+                                            <div class="text">
+                                                <span>سعودي</span>
+                                            </div>
+                                       
+                                        </li>
+                                        <li>
+                                            <div class="title">
+                                                <i data-feather="star"></i>
+                                                <h3>نوع الدوام</h3>
+                                            </div>
+                                            <div class="text">
+                                                <span>دوام فترة صباحي من الساعة 8ص الى 3 م</span>
+                                            </div>
+                                          
+                                        </li>
+                                        <li>
+                                            <div class="title">
+                                                <i data-feather="user-minus"></i>
+                                                <h3>طلبات الاجازة</h3>
+                                            </div>
+                                          <div class="text">
+                                            <span>عدد 3 أيام خلال الشهر الماضي لأسباب مهمة</span>
+                                          </div>
+                                        </li>
+                                        <li>
+                                            <div class="title">
+                                                <i data-feather="calendar"></i>
+                                                <h3>أيام الدوام</h3>
+                                            </div>
+                                          <div class="text">
+                                            <span>دوام20  يوم خلال الشهر مع حساب الاجازات</span>
+                                          </div>
+                                        </li>
+                                        <li>
+                                            <div class="title">
+                                                <i data-feather="dollar-sign"></i>
+                                                <h3>الراتب</h3>
+                                            </div>
+                                        <div class="text">
+                                            <span>يتقاضى 700$ شهرياَ</span>
+                                        </div>
+                                        </li>
+                                        <li>
+                                            <div class="title">
+                                                <i data-feather="layout"></i>
+                                                <h3>الدورات</h3>
+                                            </div>
+                                          <div class="text">
+                                            <span>حصل على دورة " إحترافية التسويق " و "إدارة الوقت" فقط</span>
+                                          </div>
+                                        </li>
+                                        <li>
+                                            <div class="title">
+                                                <i data-feather="watch"></i>
+                                                <h3>ساعات الاستئذان</h3>
+                                            </div>
+                                            <div class="text">
+                                                <span>ساعتين خلال الشهر الماضي في يومين</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="title">
+                                                <i data-feather="award"></i>
+                                                <h3>التدريب</h3>
+                                            </div>
+                                          <div class="text">
+                                            <span>لم يحصل على أي تدريب</span>
+                                          </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- Start content section -->
+
+        </div>
+        <!-- End Main  section (contains content and sidbar) -->
+        <!-- Start Footer section -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="inner">
+                    <h5>
+                        جميع الحقوق محفوظة لصالح الشركة@2020
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">اتصل بنا</a>
+                        </li>
+                        <li>
+                            <a href="#">تواصل معنا</a>
+                        </li>
+                        <li>
+                            <a href="#">المساعدة</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- End navBar section -->
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="../js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="../modals/modal.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

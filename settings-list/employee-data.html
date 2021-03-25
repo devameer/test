@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Data</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+  <link rel="stylesheet" href="../css/datepicker.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/style-rtl.css" />
+  </head>
+
+  <body>
+    <div class="dashboard-pages">
+      <!-- Start navBar section -->
+      <div class="nav-bar">
+        <div class="menu-open d-sm-none">
+          <button>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="logo">
+          <a href="#">
+            <img src="../images/logo.png" alt="" />
+          </a>
+        </div>
+        <!-- Navbar logo  -->
+        <div class="group">
+          <nav aria-label="breadcrumb" class="d-none d-sm-block">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item parent">
+                <div class="icon">
+                  <i data-feather="settings"></i>
+                </div>
+                <span>الاعدادت</span>
+              </li>
+              <li class="breadcrumb-item" aria-current="page">
+                <span>بيانات الموظفين</span>
+              </li>
+              <li class="breadcrumb-item" aria-current="page">
+                <span>عرض الجداول</span>
+              </li>
+            </ol>
+          </nav>
+          <div class="user-datails">
+            <div class="img">
+              <img
+                src="../images/25 Cute Hairstyles For Guys To Get in 2020.png"
+                alt=""
+              />
+            </div>
+            <div class="dropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span>امير عبد الله</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">
+                  <div class="icon">
+                    <i data-feather="file-text"></i>
+                  </div>
+                  <span>طلب إجازة</span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <div class="icon">
+                    <i data-feather="lock"></i>
+                  </div>
+                  <span>تغيير كلمة المرور</span></a
+                >
+                <a class="dropdown-item" href="#">
+                  <div class="icon">
+                    <i data-feather="power"></i>
+                  </div>
+                  <span>تسجيل الخروج</span></a
+                >
+              </div>
+            </div>
+          </div>
+          <!--   user details   -->
+        </div>
+        <nav aria-label="breadcrumb" class="d-sm-none in-mobile">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item parent">
+              <div class="icon">
+                <i data-feather="settings"></i>
+              </div>
+              <span>الاعدادت</span>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <span>بيانات الموظفين</span>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <span>عرض الجداول</span>
+            </li>
+          </ol>
+        </nav>
+        <!-- breadcrumb  -->
+      </div>
+      <!-- End navBar section -->
+      <!-- Start Main  section (contains content and sidbar) -->
+
+      <div id="main">
+        <!-- Start Sidebar section -->
+
+        <div class="sidebar"></div>
+        <!-- End sidebar section -->
+        <!-- Start content section -->
+
+        <div class="content" style="margin-top: 25px;">
+          <button class="btn add-new" type="button"
+          id="modify-section"
+          data-toggle="modal"
+          data-target="#exampleModal3">
+            <div class="icon">
+              <i data-feather="plus"></i>
+            </div>
+            <span>
+              اضافة جديد
+            </span>
+          </button>
+          <!-- Modal -->
+      <div
+      class="modal fade"
+      id="exampleModal3"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog"
+        role="document"
+        style="width:100%; max-width: 750px !important;"
+      >
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="padding: 7px 16px; align-items: center;"
+          >
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i data-feather="plus-square"></i>
+              <span>إضافة موظف</span>
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Start dashboard tabs -->
+            <div class="dashboard-tabs">
+              <!-- Start dashboard tabs list -->
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link active"
+                    id="tab-one-tab"
+                    data-toggle="tab"
+                    href="#tab-one"
+                    role="tab"
+                    aria-controls="tab-one"
+                    aria-selected="true"
+                  >
+                    <i data-feather="clipboard"></i>
+                    الرئيسية</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link"
+                    id="tab-two-tab"
+                    data-toggle="tab"
+                    href="#tab-two"
+                    role="tab"
+                    aria-controls="tab-two"
+                    aria-selected="false"
+                  >
+                    <i data-feather="info"></i>
+                    بيانات الدوام والمسير</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link"
+                    id="tab-three-tab"
+                    data-toggle="tab"
+                    href="#tab-three"
+                    role="tab"
+                    aria-controls="tab-three"
+                    aria-selected="false"
+                  >
+                    <i data-feather="trending-up"></i>
+                    بيانات الراتب</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link"
+                    id="tab-four-tab"
+                    data-toggle="tab"
+                    href="#tab-four"
+                    role="tab"
+                    aria-controls="tab-four"
+                    aria-selected="false"
+                  >
+                    <i data-feather="database"></i>
+                    بيانات الاستقطاع</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link"
+                    id="tab-five-tab"
+                    data-toggle="tab"
+                    href="#tab-five"
+                    role="tab"
+                    aria-controls="tab-five"
+                    aria-selected="false"
+                  >
+                    <i data-feather="user-minus"></i>
+                    بيانات حساب الاجازة</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link"
+                    id="tab-six-tab"
+                    data-toggle="tab"
+                    href="#tab-six"
+                    role="tab"
+                    aria-controls="tab-six"
+                    aria-selected="false"
+                  >
+                    <i data-feather="user-minus"></i>
+                    السلف</a
+                  >
+                </li>
+              </ul>
+              <!-- End dashboard tabs list -->
+              <!-- Start dashboard tabs content -->
+
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="tab-one"
+                  role="tabpanel"
+                  aria-labelledby="tab-one-tab"
+                >
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">رقم الموظف</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الاسم</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">رقم السجل</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="input-icon-label">
+                          <label for="">رقم الجوال</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="smartphone"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">القسم </label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>مدير</option>
+                              <option value="2">استاذ</option>
+                              <option value="3">مهندس</option>
+                            </select>
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الجنسية</label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>سعودي</option>
+                              <option value="2">اماراتي</option>
+                              <option value="3">بحريني</option>
+                            </select>
+                            <i data-feather="shield"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="tab-two"
+                  role="tabpanel"
+                  aria-labelledby="tab-two-tab"
+                >
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                     <div class="col-sm-12 col-md-6">
+                       <div class="input-icon-label">
+                         <label for="">المسمى الوظيفي</label>
+                         <div class="input-icon">
+                           <input type="text" />
+                           <i data-feather="user"></i>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="col-sm-12 col-md-6">
+                       <div class="input-icon-label">
+                         <label for="">المرتبة</label>
+                         <div class="input-icon">
+                           <input type="text" />
+                           <i data-feather="user"></i>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="col-sm-12 col-md-12">
+                      <div class="input-icon-label">
+                        <label for="">تاريخ المباشرة</label>
+                        <div class="input-icon">
+                         <div data-toggle="datepicker"></div>
+                         <input data-toggle="datepicker" type="text" />
+                          <i data-feather="calendar"></i>
+                        </div>
+                      </div>
+                    </div>
+                     <div class="col-sm-12 col-md-12">
+                      <div class="input-icon-label">
+                        <label for="">البنك </label>
+                        <div class="input-icon">
+                          <select class="custom-select">
+                            <option value="1" selected> بنك الراجحي</option>
+                            <option value="2"> بنك الراجحي</option>
+                          </select>
+                          <i data-feather="briefcase"></i>
+                        </div>
+                      </div>
+                    </div>
+                     <div class="col-sm-12 col-md-12">
+                       <div class="input-icon-label">
+                         <label for="">رقم الحساب البنكي</label>
+                         <div class="input-icon">
+                           <input type="text" />
+                           <i data-feather="briefcase"></i>
+                         </div>
+                       </div>
+                     </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">الدوام </label>
+                          <div class="input-icon">
+                            <select class="custom-select">
+                              <option value="1" selected>
+                                دوام فترة صباحية</option
+                              >
+                              <option value="2"> دوام فترة مسائية</option>
+                            </select>
+                            <i data-feather="clipboard"></i>
+                          </div>
+                        </div>
+                      </div>
+                   
+                   
+     
+                
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="tab-three"
+                  role="tabpanel"
+                  aria-labelledby="tab-three-tab"
+                >
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">قيمة الراتب</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div>
+              
+                
+                      <!-- <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">بدلات اخرى</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="briefcase"></i>
+                          </div>
+                        </div>
+                      </div> -->
+                    <div class="col-sm-12 col-md-12">
+                      <div class="form-group more-fields">
+                        <div class="more-fields-inner Switchboard">
+                      
+                        </div>
+                        
+                      
+                        <a href="javascript:void(0)" class="add-more-link" id="add-more-link">
+                            <i data-feather="plus-circle"></i>
+                            <span>إضافة بدالة </span>
+                        </a>
+                    </div>
+                    </div>
+                  
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+
+                <div
+                  class="tab-pane fade"
+                  id="tab-four"
+                  role="tabpanel"
+                  aria-labelledby="tab-four-tab"
+                >
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">إستقطاعات</label>
+                      
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="form-group more-fields">
+                          <div class="more-fields-inner Deductions">
+                            <div class="row more-Deductions-row" id="more-Deductions-row-1">
+                              <div class="col">
+                                <div class="input-icon-label">
+                                  <label for="">إسم الإستقطاع</label>
+                                  <div class="input-icon">
+                                    <input type="text" />
+                                    <i data-feather="dollar-sign"></i>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="input-icon-label">
+                                  <label for="">قيم الإستقطاع</label>
+                                  <div class="input-icon">
+                                    <div data-toggle="datepicker"></div>
+                                      <input data-toggle="datepicker" type="text" />
+                                    <i data-feather="clipboard"></i>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3">
+                                <button type="button" class="delete-btn btn" data-for="more-Deductions-row-1">
+                                    <i data-feather="trash-2"></i>
+                                </button>
+                                </div>
+                            </div>
+                       
+                          </div>
+                          
+                        
+                          <a href="javascript:void(0)" class="add-more-link" id="add-more-link-2">
+                              <i data-feather="plus-circle"></i>
+                              <span>إضافة استقطاع </span>
+                          </a>
+                      </div>
+                      </div>
+              
+                   
+
+
+
+                      
+                  
+                    </div>
+                  </div>
+                  <!--Inputs Group End-->
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="tab-five"
+                  role="tabpanel"
+                  aria-labelledby="tab-five-tab"
+                >
+                  <!--Inputs Group Start-->
+
+                  <div class="about-inputs">
+                    <div class="more-fields form-group ">
+                      <div class="more-fields-inner Holidays">
+                      <div class="row more-Holiday-row align-items-center" id="more-Holiday-row-1">
+                        <div class="col-sm-5">
+                          <div class="input-icon-label">
+                            <label for="">نوع الاجازه</label>
+                            <div class="input-icon">
+                              <select class="custom-select">
+                                <option value="1" selected>عطلة</option>
+                                <option value="2">استاذ</option>
+                                <option value="3">مهندس</option>
+                              </select>
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="input-icon-label">
+                            <label for="">عدد ايام الاجازه</label>
+                            <div class="input-icon">
+                              <input type="text" />
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="input-icon-label">
+                            <label for="">قيمه الخصم</label>
+                            <div class="input-icon">
+                              <input type="text" />
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-2">
+                          <button type="button" class="delete-btn btn" data-for="more-Holiday-row-1">
+                              <i data-feather="trash-2"></i>
+                          </button>
+                          </div>
+                    
+                      </div>
+                    </div>
+                      <a href="javascript:void(0)" class="add-more-link" id="add-more-link-3">
+                        <i data-feather="plus-circle"></i>
+                        <span>إضافة إجازة </span>
+                    </a>
+                    </div>
+                  
+                  </div>
+                  
+                  <!--Inputs Group End-->
+                </div>
+                <div
+                class="tab-pane fade"
+                id="tab-six"
+                role="tabpanel"
+                aria-labelledby="tab-six-tab"
+              >
+                <!--Inputs Group Start-->
+
+                <div class="about-inputs">
+                  <div class="more-fields form-group ">
+                    <div class="more-fields-inner Advances">
+                      <div class="row more-Advance-row align-items-center" id="more-Advance-row-1">
+                        <div class="col-9">
+                          <div class="input-icon-label">
+                            <label for="">إسم السلفة</label>
+                            <div class="input-icon">
+                              <input type="text" />
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <button type="button" class="delete-btn btn" data-for="more-Advance-row-1">
+                            <i data-feather="trash-2"></i>
+                        </button>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-icon-label">
+                            <label for="">القيمة النهائية للسلفة</label>
+                            <div class="input-icon">
+                              <input type="text" />
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-icon-label">
+                            <label for="">الخصم الشهري للسلفة</label>
+                            <div class="input-icon">
+                              <input type="text" />
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-12 col-md-12">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="input-icon-label">
+                                <label for="">تاريخ بداية السلفة</label>
+                                <div class="input-icon">
+                                  <div data-toggle="datepicker"></div>
+                            <input data-toggle="datepicker" type="text" />
+                                  <i data-feather="clipboard"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="input-icon-label">
+                                <label for=""> تاريخ نهاية السلفة</label>
+                                <div class="input-icon">
+                                  <div data-toggle="datepicker"></div>
+                            <input data-toggle="datepicker" type="text" />
+                                  <i data-feather="clipboard"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      
+                       
+    
+                      
+                      </div>
+                    </div>
+                    <a href="javascript:void(0)" class="add-more-link" id="add-more-link-4">
+                      <i data-feather="plus-circle"></i>
+                      <span>إضافة سلفة </span>
+                  </a>
+                  </div>
+                  
+                </div>
+              
+                <!--Inputs Group End-->
+              </div>
+              </div>
+              <!-- End dashboard tabs content -->
+            </div>
+            <!-- End dashboard tabs -->
+          </div>
+          <div class="modal-footer">
+            <!--Buttons Group Start-->
+            <div class="about-buttons">
+              <button class="btn dark-blue-btn">
+                <i data-feather="check"></i><span>حفظ</span>
+              </button>
+              <button class="btn cancel-red-btn" data-dismiss="modal">
+                <i data-feather="x-circle"></i><span>الغاء</span>
+              </button>
+            </div>
+            <!--Buttons Group End-->
+          </div>
+        </div>
+      </div>
+    </div>
+          <div class="content-inner">
+            <!-- Start management And sections section -->
+            <div class="management-sections">
+              <!-- Start dashboard-table section -->
+              <div class="dashboard-table">
+                <div class="search-inputs">
+                  <div class="select-search">
+                    <label for="search-select">بحث حسب</label>
+                    <select class="custom-select" id="search-select">
+                      <option value="1">اسم الموظف</option>
+                      <option value="2">رقم الجوال </option>
+                      <option value="3">رقم السجل</option>
+     
+  
+                    </select>
+                  </div>
+                  <div class="select-search">
+                    <label for="search-select">بحث </label>
+                    <input type="text" id="search-select">
+                  </div>
+                </div>
+                <table id="example-1" class="display" style="width: 100%;">
+                  <thead>
+                    <tr>
+                      <th>الرقم</th>
+                      <th>الاسم</th>
+                      <th>رقم الجوال</th>
+                      <th>رقم السجل</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>فرج موسى</td>
+                      <td>0598627543</td>
+                      <td>123</td>
+                      <td><a href="/settings-list/add-precense-periods.html" class="periods">فترات الدوام</a></td>                      
+                      <td>
+                     
+                        
+                        <div class="icons">
+                          <button class="btn edit-btn" type="button"
+        id="modify-section"
+        data-toggle="modal"
+        data-target="#exampleModal4">
+                            <i data-feather="edit-2" class="edit-svg"></i>
+                          </button>
+
+                          <button class="btn delete-btn" type="button" id="delete-confirm" data-toggle="modal"
+                          data-target="#exampleModal124">
+                            <i data-feather="trash-2" class="delete-svg"></i>
+                          </button>
+                             <!-- Modal -->
+                        <div class="modal fade" id="exampleModal124" tabindex="-1" role="dialog"
+                          aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+
+                              <div class="modal-body text-canter">
+                                <div class="about-img">
+                                  <img src="../images/quit.png" alt="">
+                                </div>
+                                <h3 id="modal-title"> هل تريد تأكيد عملية الحذف ؟</h3>
+                              </div>
+                              <div class="modal-footer">
+                                <button class="btn dark-blue-btn">
+                                  <i data-feather="check"></i><span>نعم</span>
+                                </button>
+                                <button class="btn cancel-red-btn" data-dismiss="modal">
+                                  <i data-feather="x-circle"></i><span>اغلاق</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>فرج موسى</td>
+                      <td>0598627543</td>
+                      <td>123</td>
+                      <td><a href="/settings-list/add-precense-periods.html" class="periods">فترات الدوام</a></td>
+                      <td>
+                       
+                        
+                        <div class="icons">
+                          <button class="btn edit-btn" type="button"
+        id="modify-section"
+        data-toggle="modal"
+        data-target="#exampleModal4">
+                            <i data-feather="edit-2" class="edit-svg"></i>
+                          </button>
+
+                          <button class="btn delete-btn" type="button" id="delete-confirm" data-toggle="modal"
+                          data-target="#exampleModal124">
+                            <i data-feather="trash-2" class="delete-svg"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>فرج موسى</td>
+                      <td>0598627543</td>
+                      <td>123</td>
+                      <td><a href="/settings-list/add-precense-periods.html" class="periods">فترات الدوام</a></td>
+                      <td>
+                       
+                        
+                        <div class="icons">
+                          <button class="btn edit-btn" type="button"
+        id="modify-section"
+        data-toggle="modal"
+        data-target="#exampleModal4">
+                            <i data-feather="edit-2" class="edit-svg"></i>
+                          </button>
+
+                          <button class="btn delete-btn" type="button" id="delete-confirm" data-toggle="modal"
+                          data-target="#exampleModal124">
+                            <i data-feather="trash-2" class="delete-svg"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>فرج موسى</td>
+                      <td>0598627543</td>
+                      <td>123</td>
+                      <td><a href="/settings-list/add-precense-periods.html" class="periods">فترات الدوام</a></td>
+                      <td>
+                       
+                        
+                        <div class="icons">
+                          <button class="btn edit-btn" type="button"
+        id="modify-section"
+        data-toggle="modal"
+        data-target="#exampleModal4">
+                            <i data-feather="edit-2" class="edit-svg"></i>
+                          </button>
+
+                          <button class="btn delete-btn" type="button" id="delete-confirm" data-toggle="modal"
+                          data-target="#exampleModal124">
+                            <i data-feather="trash-2" class="delete-svg"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>فرج موسى</td>
+                      <td>0598627543</td>
+                      <td>123</td>
+                      <td><a href="/settings-list/add-precense-periods.html" class="periods">فترات الدوام</a></td>
+                      <td>
+                       
+                        
+                        <div class="icons">
+                          <button class="btn edit-btn" type="button"
+        id="modify-section"
+        data-toggle="modal"
+        data-target="#exampleModal4">
+                            <i data-feather="edit-2" class="edit-svg"></i>
+                          </button>
+
+                          <button class="btn delete-btn" type="button" id="delete-confirm" data-toggle="modal"
+                          data-target="#exampleModal124">
+                            <i data-feather="trash-2" class="delete-svg"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End dashboard-table section -->
+            </div>
+            <!-- End management And sections section -->
+          </div>
+        </div>
+        <!-- Start content section -->
+      </div>
+      <!-- End Main  section (contains content and sidbar) -->
+      <!-- Start Footer section -->
+      <div class="footer">
+        <div class="container-fluid">
+          <div class="inner">
+            <h5>
+              جميع الحقوق محفوظة لصالح الشركة@2020
+            </h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">اتصل بنا</a>
+              </li>
+              <li>
+                <a href="#">تواصل معنا</a>
+              </li>
+              <li>
+                <a href="#">المساعدة</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End navBar section -->
+    </div>
+
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="../js/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="../modals/modal.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('add-more-link').onclick = function createInputField() {
+
+//   var testId = "player";
+var i = 0;
+var x = $('.more-fields-row').length + 1;
+for (i = 0; i < x; i++) {
+    i;
+}
+
+$('.Switchboard').append(`
+<div class="more-fields-row" id="more-fields-row-${i}">
+<div class="row">
+
+
+<div class="col-6">
+
+<div class="form-group">
+    <label for="Reason-${i}"><span>البدالة</span></label>
+    <input type="text" class="form-control" id="Anpunt-${i}">
+
+</div>
+</div>
+<div class="col-3">
+<div class="form-group">
+    <label for="Anpunt"> <span>قيمة البدالة
+        </span></label>
+    <input type="text" class="form-control" id="Anpunt-${i}">
+
+
+</div>
+</div>
+<div class="col-3">
+<button type="button" class="delete-btn btn" data-for="more-fields-row-${i}">
+    <i data-feather="trash-2"></i>
+</button>
+</div>
+</div>
+</div>
+`);
+//   input.setAttribute('id', testId + i);
+//   input.type = 'text';
+//   input.name = 'player[]';
+//   var aplayer1 = document.getElementById('input-player-list');
+//   aplayer1.appendChild(input);
+feather.replace()
+
+}
+
+
+document.getElementById('add-more-link-2').onclick = function createInputField() {
+
+//   var testId = "player";
+var i = 0;
+var x = $('.more-Deductions-row').length + 1;
+for (i = 0; i < x; i++) {
+    i;
+}
+
+$('.Deductions').append(`
+<div class="row more-Deductions-row" id="more-Deductions-row-${i}">
+                            <div class="col">
+                              <div class="input-icon-label">
+                                <label for="">إسم الإستقطاع</label>
+                                <div class="input-icon">
+                                  <input type="text" />
+                                  <i data-feather="dollar-sign"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="input-icon-label">
+                                <label for="">قيم الإستقطاع</label>
+                                <div class="input-icon">
+                                  <div data-toggle="datepicker"></div>
+                                    <input data-toggle="datepicker" type="text" />
+                                  <i data-feather="clipboard"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <button type="button" class="delete-btn btn" data-for="more-Deductions-row-${i}">
+                                  <i data-feather="trash-2"></i>
+                              </button>
+                              </div>
+                          </div>
+`);
+//   input.setAttribute('id', testId + i);
+//   input.type = 'text';
+//   input.name = 'player[]';
+//   var aplayer1 = document.getElementById('input-player-list');
+//   aplayer1.appendChild(input);
+feather.replace()
+
+}
+
+document.getElementById('add-more-link-3').onclick = function createInputField() {
+
+//   var testId = "player";
+var i = 0;
+var x = $('.more-Holiday-row').length + 1;
+for (i = 0; i < x; i++) {
+    i;
+}
+
+$('.Holidays').append(`
+<div class="row more-Holiday-row" id="more-Holiday-row-${i}">
+                        <div class="col-sm-5">
+                          <div class="input-icon-label">
+                            <label for="">نوع الاجازه</label>
+                            <div class="input-icon">
+                              <select class="custom-select">
+                              <option value="1" selected>عطلة</option>
+                              <option value="2">استاذ</option>
+                              <option value="3">مهندس</option>
+                            </select>
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="input-icon-label">
+                            <label for="">عدد ايام الاجازه</label>
+                            <div class="input-icon">
+                              <input type="text" />
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="col-sm-5">
+                          <div class="input-icon-label">
+                            <label for="">قيمه الخصم</label>
+                            <div class="input-icon">
+                              <input type="text" />
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-2">
+                          <button type="button" class="delete-btn btn" data-for="more-Holiday-row-${i}">
+                              <i data-feather="trash-2"></i>
+                          </button>
+                          </div>
+                    
+                      </div>
+`);
+//   input.setAttribute('id', testId + i);
+//   input.type = 'text';
+//   input.name = 'player[]';
+//   var aplayer1 = document.getElementById('input-player-list');
+//   aplayer1.appendChild(input);
+feather.replace()
+
+}
+
+
+
+document.getElementById('add-more-link-4').onclick = function createInputField() {
+
+//   var testId = "player";
+var i = 0;
+var x = $('.more-Advance-row').length + 1;
+for (i = 0; i < x; i++) {
+    i;
+}
+
+$('.Advances').append(`
+<div class="row more-Advance-row" id="more-Advance-row-${i}">
+                        <div class="col-9">
+                          <div class="input-icon-label">
+                            <label for="">إسم السلفة</label>
+                            <div class="input-icon">
+                              <input type="text" />
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <button type="button" class="delete-btn btn" data-for="more-Advance-row-${i}">
+                            <i data-feather="trash-2"></i>
+                        </button>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-icon-label">
+                            <label for="">القيمة النهائية للسلفة</label>
+                            <div class="input-icon">
+                              <input type="text" />
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-icon-label">
+                            <label for="">الخصم الشهري للسلفة</label>
+                            <div class="input-icon">
+                              <input type="text" />
+                              <i data-feather="dollar-sign"></i>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-12 col-md-12">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="input-icon-label">
+                                <label for="">تاريخ بداية السلفة</label>
+                                <div class="input-icon">
+                                  <div data-toggle="datepicker"></div>
+                            <input data-toggle="datepicker" type="text" />
+                                  <i data-feather="clipboard"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="input-icon-label">
+                                <label for=""> تاريخ نهاية السلفة</label>
+                                <div class="input-icon">
+                                  <div data-toggle="datepicker"></div>
+                            <input data-toggle="datepicker" type="text" />
+                                  <i data-feather="clipboard"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      
+                       
+    
+                      
+                      </div>
+`);
+//   input.setAttribute('id', testId + i);
+//   input.type = 'text';
+//   input.name = 'player[]';
+//   var aplayer1 = document.getElementById('input-player-list');
+//   aplayer1.appendChild(input);
+feather.replace()
+
+}
+setInterval(function () {
+$('.delete-btn').on('click', function () {
+    var aa = $(this).data('for');
+
+    $('#' + aa).remove();
+})
+}, 1000);
+    </script>
+  </body>
+</html>

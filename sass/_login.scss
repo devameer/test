@@ -1,0 +1,221 @@
+.login-page {
+    .row {
+      min-height: 100vh;
+    }
+    .login-form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 15px;
+      .logo {
+        text-align: center;
+        margin-top: auto;
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        animation-delay: 0.7s;
+        animation-fill-mode: both;
+        img {
+          max-width: 220px;
+        }
+      }
+      .form-footer {
+        margin-top: auto;
+        padding-bottom: 10px;
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: both;
+        ul {
+          display: flex;
+          justify-content: space-around;
+          padding: 0;
+          a {
+            span {
+              margin: 0 10px;
+              font-size: 14px;
+              color: #707070;
+            }
+          }
+        }
+      }
+      form {
+        margin-top: 40px;
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        animation-delay: 1.3s;
+        animation-fill-mode: both;
+        width: 100%;
+        .form-group {
+          label {
+            font-size: 14px;
+            color: #707070;
+            display: block;
+            text-align: right;
+          }
+          input {
+            border-radius: 6px;
+            border: solid 1px #707070;
+          }
+        }
+        .remember-forget {
+          display: flex;
+          justify-content: space-between;
+          .custom-control {
+            label {
+              font-size: 14px;
+              color: #707070;
+            }
+          }
+          a {
+            font-size: 14px;
+            color: #707070;
+          }
+        }
+        .btn-login {
+          display: block;
+          padding: 15px;
+          margin-top: 20px;
+          text-align: center;
+          background-color: #e74c3c;
+          color: #fff;
+          width: 100%;
+          margin-top: 40px;
+          transition: all 0.5s;
+        }
+        .btn-login:hover {
+          transform: translateY(-5px);
+          opacity: 0.8s;
+        }
+        .demo-link {
+          border: solid 1px #707070;
+          color: #707070;
+          display: block;
+          padding: 15px;
+          margin-top: 20px;
+          text-align: center;
+          width: 100%;
+          transition: all 0.5s;
+          &:hover {
+            border-color: #e74c3c;
+            transform: translateY(-5px);
+            color: #e74c3c;
+          }
+        }
+      }
+    }
+    .video-sec {
+      background-image: url(../images/video-sec.svg);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 20px;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      .video-box {
+        position: relative;
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        animation-delay: 0.7s;
+        animation-fill-mode: both;
+  
+        img {
+          max-width: 100%;
+        }
+        .overlay {
+          width: 100px;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #fff;
+          border-radius: 50%;
+          position: absolute;
+          cursor: pointer;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+      .video-desc {
+        max-width: 500px;
+        margin-top: 100px;
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: both;
+        p {
+          font-size: 16px;
+          text-align: center;
+          line-height: 1.88;
+          color: #fff;
+        }
+      }
+    }
+  }
+  #exampleModal{
+    .modal-body {
+        position: relative;
+        padding: 0px;
+      }
+      .close {
+        position: absolute;
+        right: -30px;
+        top: 0;
+        z-index: 999;
+        font-size: 2rem;
+        font-weight: normal;
+        color: #fff;
+        opacity: 1;
+      }
+  }
+
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .form-footer-mobile {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      a {
+        margin-bottom: 15px;
+        display: block;
+        span {
+          margin: 0 10px;
+          font-size: 14px;
+          color: #707070;
+        }
+      }
+    }
+  }
+  

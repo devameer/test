@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Training system</title>
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link rel="stylesheet" href="../css/datepicker.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style-rtl.css" />
+</head>
+
+<body>
+  <div class="dashboard-pages">
+    <!-- Start navBar section -->
+    <div class="nav-bar">
+      <div class="menu-open d-sm-none">
+        <button>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="logo">
+        <a href="#">
+          <img src="../images/logo.png" alt="" />
+        </a>
+      </div>
+      <!-- Navbar logo  -->
+      <div class="group">
+        <nav aria-label="breadcrumb" class="d-none d-sm-block">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item parent">
+              <div class="icon">
+                <i data-feather="calendar"></i>
+              </div>
+              <span>إدارة خارج الدوام</span>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <span>نظام التدريب</span>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <span>عرض الجداول</span>
+            </li>
+          </ol>
+        </nav>
+        <div class="user-datails">
+          <div class="img">
+            <img src="../images/25 Cute Hairstyles For Guys To Get in 2020.png" alt="" />
+          </div>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span>امير عبد الله</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">
+                <div class="icon">
+                  <i data-feather="file-text"></i>
+                </div>
+                <span>طلب إجازة</span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <div class="icon">
+                  <i data-feather="lock"></i>
+                </div>
+                <span>تغيير كلمة المرور</span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <div class="icon">
+                  <i data-feather="power"></i>
+                </div>
+                <span>تسجيل الخروج</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--   user details   -->
+      </div>
+      <nav aria-label="breadcrumb" class="d-sm-none in-mobile">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item parent">
+            <div class="icon">
+              <i data-feather="calendar"></i>
+            </div>
+            <span>إدارة خارج الدوام</span>
+          </li>
+          <li class="breadcrumb-item" aria-current="page">
+            <span>نظام التدريب</span>
+          </li>
+          <li class="breadcrumb-item" aria-current="page">
+            <span>عرض الجداول</span>
+          </li>
+        </ol>
+      </nav>
+      <!-- breadcrumb  -->
+    </div>
+    <!-- End navBar section -->
+    <!-- Start Main  section (contains content and sidbar) -->
+
+    <div id="main">
+      <!-- Start Sidebar section -->
+
+      <div class="sidebar"></div>
+      <!-- End sidebar section -->
+      <!-- Start content section -->
+
+      <div class="content" style="margin-top: 25px;">
+        <div class="btn-head" style="display: flex; justify-content: flex-end;">
+          <button class="btn add-new" style="margin-right: 0; margin-left: 10px;" type="button" id="modify-section"
+            data-toggle="modal" data-target="#exampleModal19">
+            <div class="icon">
+              <i data-feather="plus"></i>
+            </div>
+            <span>
+              اضافة تدريب
+            </span>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal19" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document" style="max-width: 750px !important;">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    <i data-feather="plus-square"></i>
+                    <span>إضافة تدريب </span>
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    style="margin: -25px -16px;">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="about-inputs">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">العنوان </label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="globe"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">تاريخ بداية التدريب </label>
+                          <div class="input-icon">
+                            <div data-toggle="datepicker"></div>
+                            <input data-toggle="datepicker" type="text" />
+                            <i data-feather="calendar"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">تاريخ نهاية التدريب </label>
+                          <div class="input-icon">
+                            <div data-toggle="datepicker"></div>
+                            <input data-toggle="datepicker" type="text" />
+                            <i data-feather="calendar"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12">
+                        <div class="input-icon-label">
+                          <label for="">ساعات التدريب</label>
+                          <div class="input-icon">
+                            <input type="text" />
+                            <i data-feather="watch"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <!--Buttons Group Start-->
+                  <div class="about-buttons">
+                    <button class="btn dark-blue-btn">
+                      <i data-feather="check"></i><span>حفظ</span>
+                    </button>
+                    <button class="btn cancel-red-btn" data-dismiss="modal">
+                      <i data-feather="x-circle"></i><span>الغاء</span>
+                    </button>
+                  </div>
+                  <!--Buttons Group End-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn add-new" style="margin-right: 0;" type="button" id="modify-section" data-toggle="modal"
+            data-target="#exampleModal20">
+
+            <div class="icon">
+              <i data-feather="plus"></i>
+            </div>
+            <span>
+              اضافة موظف
+            </span>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal20" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    <i data-feather="plus-square"></i>
+                    <span>إضافة موظف الى التدريب</span>
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    style="margin: -25px -16px;">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="input-icon-label">
+                    <label for="">التدريب</label>
+                    <div class="input-icon">
+                      <select class="custom-select">
+                        <option value="1" selected>قم بأختيار التدريب</option>
+                        <option value="2">استاذ</option>
+                        <option value="3">مهندس</option>
+                      </select>
+                      <i data-feather="globe"></i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <div class="about-img">
+                    <img src="../images/work.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-inner">
+          <!-- Start management And sections section -->
+          <div class="management-sections">
+            <!-- Start dashboard-table section -->
+            <div class="dashboard-table">
+              <div class="search-inputs">
+                <div class="select-search">
+                  <label for="search-select">بحث حسب</label>
+                  <select class="custom-select" id="search-select">
+                    <option value="1">الاسم</option>
+                    <option value="2">تاريخ بداية التدريب</option>
+                    <option value="3">تاريخ نهاية التدريب</option>
+
+                  </select>
+                </div>
+                <div class="select-search">
+                  <label for="search-select">بحث </label>
+                  <input type="text" id="search-select">
+                </div>
+              </div>
+              <table id="example-1" class="display" style="width: 100%;">
+                <thead>
+                  <tr>
+                    <th>الاسم</th>
+                    <th>بداية التدريب</th>
+                    <th>نهاية التدريب</th>
+                    <th>ساعات التدريب</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>إدارة الوقت</td>
+                    <td>4-11-2019</td>
+                    <td>4-11-2020</td>
+                    <td>30</td>
+                    <td>
+
+                      <div class="icons">
+
+
+                        <button class="btn delete-btn" type="button" id="delete-confirm" data-toggle="modal"
+                          data-target="#exampleModal124" >
+                          <i data-feather="trash-2" class="delete-svg"></i>
+                        </button>
+                           <!-- Modal -->
+                           <div class="modal fade" id="exampleModal124" tabindex="-1" role="dialog"
+                           aria-labelledby="exampleModalLabel" aria-hidden="true">
+                           <div class="modal-dialog" role="document">
+                             <div class="modal-content">
+ 
+                               <div class="modal-body text-canter">
+                                 <div class="about-img">
+                                   <img src="../images/quit.png" alt="">
+                                 </div>
+                                 <h3 id="modal-title"> هل تريد تأكيد عملية الحذف ؟</h3>
+                               </div>
+                               <div class="modal-footer">
+                                 <button class="btn dark-blue-btn">
+                                   <i data-feather="check"></i><span>نعم</span>
+                                 </button>
+                                 <button class="btn cancel-red-btn" data-dismiss="modal">
+                                   <i data-feather="x-circle"></i><span>اغلاق</span>
+                                 </button>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+            <!-- End dashboard-table section -->
+          </div>
+          <!-- End management And sections section -->
+        </div>
+      </div>
+      <!-- Start content section -->
+    </div>
+    <!-- End Main  section (contains content and sidbar) -->
+    <!-- Start Footer section -->
+    <div class="footer">
+      <div class="container-fluid">
+        <div class="inner">
+          <h5>
+            جميع الحقوق محفوظة لصالح الشركة@2020
+          </h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">اتصل بنا</a>
+            </li>
+            <li>
+              <a href="#">تواصل معنا</a>
+            </li>
+            <li>
+              <a href="#">المساعدة</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End navBar section -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="../js/datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="../modals/modal.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

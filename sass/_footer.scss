@@ -1,0 +1,30 @@
+.footer {
+  background-color: #314661;
+  padding: 25px 0;
+
+  .container-fluid {
+    padding-right: 55px !important;
+    padding-left: 28px !important;
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h5 {
+        font-size: 14px;
+
+        color: #ffffff;
+      }
+      ul {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        a {
+          font-size: 14px;
+
+          color: #ffffff;
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}

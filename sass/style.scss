@@ -1,0 +1,52 @@
+:root {
+  --main-color: #f5b66d;
+  --text-color: #3a4e6a;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import "login";
+@import "nav-bar";
+@import "dashboard";
+@import "sidebar";
+@import "content";
+@import "personal-profile";
+@import "footer";
+@import "global";
+@import "responsive";
+@import "addings-pages";
+@import "component";
+@import "modal";
+
+.prefix__cls-1 {
+  fill: #e0e0e0;
+}
+.prefix__cls-2 {
+  fill: #fafafa;
+}
+.prefix__cls-4 {
+  fill: #263238;
+}
+.prefix__cls-5 {
+  fill: #455a64;
+}
+.prefix__cls-6 {
+  fill: #e8505b;
+}
+.prefix__cls-7 {
+  opacity: 0.79;
+}
+.prefix__cls-8 {
+  fill: #fff;
+}
+.prefix__cls-9 {
+  opacity: 0.3;
+}
+.prefix__cls-10 {
+  opacity: 0.6;
+}
+.prefix__cls-12 {
+  opacity: 0.4;
+}

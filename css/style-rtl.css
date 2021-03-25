@@ -1,0 +1,27 @@
+@font-face {
+  font-family: arabic;
+  src: url(../fonts/ArbFONTS-DINNextLTArabic-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: arabic;
+  src: url(../fonts/ArbFONTS-DINNextLTArabic-Bold.ttf);
+  font-weight: bold;
+}
+
+body {
+  font-family: arabic;
+  direction: rtl;
+}
+
+.custom-control-label::before, .custom-control-label::after {
+  left: auto;
+  right: -1.5rem;
+}
+
+.custom-control {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+/*# sourceMappingURL=style-rtl.css.map */

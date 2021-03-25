@@ -1,0 +1,149 @@
+.swal-modal {
+  .swal-title {
+    color: var(--text-color);
+    font-weight: 300;
+  }
+
+  .swal-footer {
+    display: flex;
+    justify-content: center;
+    .swal-button-container {
+      .swal-button--cancel {
+        background-color: #e63816;
+        color: white;
+      }
+      .swal-button--confirm {
+        background-color: var(--text-color);
+        color: white;
+      }
+    }
+  }
+}
+
+.modal-content {
+  text-align: right;
+  .modal-header {
+    border-bottom: 3px solid #dee2e6;
+    .modal-title {
+      span {
+        color: var(--text-color);
+        font-size: 16px;
+      }
+      svg {
+        width: 21px;
+      }
+    }
+    .close {
+      right: auto;
+      left: -4px;
+      font-size: 2.2rem;
+      color: #565555 !important;
+      outline: none;
+      margin: -8px 2px;
+    }
+  }
+  .modal-body {
+    padding: 35px !important;
+    .about-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    #modal-title {
+      color: var(--text-color);
+    }
+    .about-img {
+      margin-bottom: 12px;
+      img {
+        max-width: 115px;
+      }
+    }
+    .dashboard-table {
+      .dataTables_wrapper > {
+        .row:nth-child(1),
+        .row:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+  .text-canter {
+    text-align: center;
+  }
+  .modal-footer {
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+    .about-buttons {
+      display: flex;
+    }
+  }
+}
+
+.input-file {
+  background: var(--text-color);
+  label {
+    cursor: pointer;
+  }
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 5px;
+  svg {
+    stroke: white;
+    background: #4e5f77;
+    border-radius: 3px;
+  }
+  input[type="file"] {
+    display: none;
+  }
+  label {
+    color: white;
+    margin: 0 10px;
+  }
+  #cancel {
+    padding: 0;
+    display: flex;
+    svg {
+      stroke: white;
+      background-color: #e63816;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.attach-file {
+  width: 100%;
+  background: #e4e4e4;
+  border: 2px dashed #7b7a86;
+  padding: 4px 10px;
+  border-radius: 10px;
+  .rule-file {
+    display: flex;
+    align-items: center;
+    .icon {
+      background: #ababab;
+      border-radius: 5px;
+      svg {
+        stroke: #505050;
+      }
+    }
+    .text {
+      margin-right: 15px;
+      h4 {
+        font-size: 14px;
+        font-weight: bold;
+        color: #353535;
+        margin: 0;
+      }
+      span {
+        font-size: 13px;
+        color: #595a5a;
+      }
+    }
+  }
+}

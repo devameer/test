@@ -1,0 +1,192 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .dashboard-table .dataTables_wrapper > .row:nth-child(1) .dataTables_length,
+  .dashboard-table .dataTables_wrapper > .row:nth-child(1) .dataTables_filter {
+    text-align: center;
+    label {
+      input {
+        padding: 18px 69px;
+      }
+    }
+  }
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    flex-wrap: wrap;
+  }
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination li {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .dashboard-table .dataTables_wrapper > .row:nth-child(3) .dataTables_info {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .dashboard-tabs .nav-tabs {
+    justify-content: center;
+  }
+  .dashboard-tabs .nav-tabs .nav-item .nav-link {
+    font-size: 13px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .choose-answer
+    .choose-answer-inputs
+    .custom-control
+    .custom-control-label
+    .sub {
+    flex-wrap: wrap;
+  }
+  .choose-answer
+    .choose-answer-inputs
+    .custom-control
+    .custom-control-label
+    .sub
+    > span {
+    margin-bottom: 15px;
+  }
+  .content .notes {
+    flex-direction: column;
+    padding-top: 40px;
+    .text {
+      margin-bottom: 30px;
+    }
+  }
+  .footer .inner {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    h5 {
+      margin-bottom: 20px;
+    }
+  }
+  .dashboard-box-headlines .public-box {
+    margin-bottom: 40px;
+  }
+  .data-boxes .box-title .box {
+    height: auto !important;
+    padding: 25px 10px;
+  }
+  .content.profile .content-inner .left-personal-info .info-list ul li .text {
+    margin-right: 20px;
+  }
+  .dashboard-table .dataTables_wrapper > .row:nth-child(3) .paging_simple_numbers .pagination{
+      margin-left: auto;
+  }
+  #about-table-model {
+    width: 100%;
+    overflow: scroll;
+  }
+  .dark-blue-btn{
+    white-space: nowrap; 
+  }
+  .addings-pages .precense-periods .time-select{
+      padding: 0 !important;
+  }
+  .addings-pages .precense-periods .time-select .time2{
+      margin-top: 30px;
+  }
+  .addings-pages .precense-periods .time{
+      margin-bottom: 30px;
+  }
+  .addings-pages .precense-periods{
+    padding: 50px 0 !important;
+  }
+  .dash-head{
+    font-size: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .data-boxes .box-title{
+      margin-bottom: 30px;
+  }
+  .data-boxes .box-title .box .icon-data .icon{
+    width: 34px;
+    height: 34px;
+  }
+  .data-boxes .box-title .box .icon-data .icon svg{
+      width: 17px;
+  }
+  .data-boxes .box-title .box .icon-data .info {
+    margin-right: 6px;
+}
+.data-boxes .box-title .box .icon-data .info p{
+    font-size: 13px;
+}
+.data-boxes .box-title .box .icon-data .time{
+    font-size: 12px;
+    white-space: nowrap;
+}
+.content .content-inner
+{
+  padding: 40px 20px;
+}
+.dashboard-table .search-inputs{
+  flex-direction: column;
+}
+.dashboard-table .search-inputs .select-search{
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .content,
+  .nav-bar .group {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  .dashboard-tabs .nav-tabs {
+    justify-content: center;
+  }
+
+  .dashboard-box-headlines .public-box {
+    margin-bottom: 40px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .content,
+  .nav-bar .group {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .content,
+  .nav-bar .group {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+
+@media (min-width: 1200px) {
+  .content,
+  .nav-bar .group {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .content,
+  .nav-bar .group {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .content,
+  .nav-bar .group {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1900px) {
+}
